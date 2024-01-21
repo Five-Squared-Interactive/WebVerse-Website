@@ -27,26 +27,24 @@
 				<div class="container box large">
 					<p>There are a variety of sample worlds you can try. You can also enter the address to a custom one in the URL box below.</p>
 					<hr>
-					<h2>Basic World</h2>
+					<h2>Simple Meshes Scene</h2>
 					<p>This is a very simple multi-user world. You can use the WASD keys to navigate around and enter chat messages into the provided text box.</p>
-					<p>Source: <a href="#">#</a></p>
-					<p>Try Now: </p>
-					<button onClick="LoadWorld('https://webverse-samples.s3.amazonaws.com/simple-world/index.veml')";>Test</button>
+					<p>Source: <a href="https://github.com/Five-Squared-Interactive/WebVerse-Samples/tree/main/Simple-Meshes-Scene">GitHub</a></p>
+					<button onClick="LoadWorld('https://webverse-samples.s3.amazonaws.com/Simple-Meshes-Scene/index.veml')";>Try Now</button>
 					<hr>
 					<h2>Small Town</h2>
 					<p>This is similar to Basic World. You can use the WASD keys to navigate around and enter chat messages into the provided text box. The models are large, so they might take a minute to load.</p>
-					<p>Source: <a href="#">#</a></p>
-					<p>Try Now: </p>
-					<button onClick="LoadWorld('https://webverse-samples.s3.amazonaws.com/simple-world/city.veml')";>Test</button>
+					<p>Source: <a href="https://github.com/Five-Squared-Interactive/WebVerse-Samples/tree/main/Small-Town/">GitHub</a></p>
+					<button onClick="LoadWorld('https://webverse-samples.s3.amazonaws.com/simple-world/city.veml')";>Try Now</button>
 					<hr>
 					<p>Enter any other world's address: </p>
 					<input id="browserinput" size="79"></input>
 					<button onClick="RegisterInput();">Go</button>
 					<br>
 					<a href="apphelp.html" target="_blank">Having trouble?</a>
-					<embed id="browser" type="text/html" src="https://webverse-webgl.s3.amazonaws.com/WebGL/index.html" width="100%" height="525">
+					<embed id="browser" type="text/html" src="" width="100%" height="525">
 					<button><img src="images/arrow-expand-all.png" height=79% width=79% onClick="OpenTab();"></button>
-					<p>Thank you for trying WebVerse. The web application is a quick and easy way to get started in the Metaverse. A more complete standalone version (with VR support) will be available soon. The web application works with the same worlds the standalone version will (with reduced performance).</p>
+					<p>Thank you for trying WebVerse. The web application is a quick and easy way to get started in the Web Metaverse. A <a href="https://github.com/Five-Squared-Interactive/WebVerse/releases/tag/v1.0.0">higher fidelity standalone version</a> is available (with VR support). The web application works with the same worlds as standalone version (with reduced performance).</p>
 				</div>
 			</section>
 
@@ -101,7 +99,7 @@
 					var browser = document.getElementById("browser");
 					if (browser != null) {
 						var newBrowser = browser.cloneNode(true);
-						newBrowser.setAttribute("src", "https://webverse-webgl.s3.amazonaws.com/WebGL/index.html?address=" + address);
+						newBrowser.setAttribute("src", 'https://webverse-webgl.s3.amazonaws.com/WebGL/index.html?main_app_id=00000000-0000-0000-0000-000000000000&daemon_port=5525&max_entries=2048&max_entry_length=2048&max_key_length=512&tab_id=100&world_url=' + address);
 						browser.parentNode.replaceChild(newBrowser, browser);
 						var input = document.getElementById("browserinput");
 						if (input != null) {
@@ -120,7 +118,8 @@
 				function OpenTab() {
 					var input = document.getElementById("browserinput");
 					if (input != null) {
-						window.location.assign("https://webverse-webgl.s3.amazonaws.com/WebGL/index.html?address=" + input.value);
+						console.log("here");
+						window.location.assign('https://webverse-webgl.s3.amazonaws.com/WebGL/index.html?main_app_id=00000000-0000-0000-0000-000000000000&daemon_port=5525&max_entries=2048&max_entry_length=2048&max_key_length=512&tab_id=100&world_url=' + input.value);
 					}
 				}
 			</script>
