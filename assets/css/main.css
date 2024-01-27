@@ -3773,3 +3773,18 @@ input, select, textarea {
 				}
 
 	}
+	
+.dark-background {
+  background-color: #000000;
+  pointer-events: none;
+  user-select: none;
+}
+
+.white-text {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: xx-large;
+  pointer-events: none;
+  user-select: none;
+}
