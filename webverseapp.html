@@ -185,7 +185,7 @@
 					var browser = document.getElementById("browser");
 					if (browser != null) {
 						var newBrowser = browser.cloneNode(true);
-						newBrowser.setAttribute("src", 'https://webverse-webgl.s3.amazonaws.com/WebGL/index.html?main_app_id=00000000-0000-0000-0000-000000000000&daemon_port=5525&max_entries=2048&max_entry_length=2048&max_key_length=512&tab_id=100&world_url=' + address);
+						newBrowser.setAttribute("src", 'https://webverse-webgl.s3.amazonaws.com/WebGL/index.html?main_app_id=00000000-0000-0000-0000-000000000000&daemon_port=5525&max_entries=2048&max_entry_length=2048&max_key_length=512&tab_id=100&files_directory=files&world_load_timeout=300&world_url=' + address);
 						browser.parentNode.replaceChild(newBrowser, browser);
 						var input = document.getElementById("browserinput");
 						if (input != null) {
@@ -204,7 +204,7 @@
 				function OpenTab() {
 					var input = document.getElementById("browserinput");
 					if (input != null) {
-						window.location.assign('https://webverse-webgl.s3.amazonaws.com/WebGL/index.html?main_app_id=00000000-0000-0000-0000-000000000000&daemon_port=5525&max_entries=2048&max_entry_length=2048&max_key_length=512&tab_id=100&world_url=' + input.value);
+						window.location.assign('https://webverse-webgl.s3.amazonaws.com/WebGL/index.html?main_app_id=00000000-0000-0000-0000-000000000000&daemon_port=5525&max_entries=2048&max_entry_length=2048&max_key_length=512&tab_id=100&files_directory=files&world_load_timeout=300&world_url=' + input.value);
 					}
 				}
 			</script>
