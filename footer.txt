@@ -1,41 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Contact Us</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/webverse-icon.png">
-	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-			<header id="header">
-				<h1><a id="logo" href="index.html"><img src="images/webverse-text-blue-small.png"></span></a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="https://github.com/Five-Squared-Interactive/WebVerse/wiki">Developer Wiki</a></li>
-						<li><a href="webverseapp.html" class="button">Try Now</a></li>
-					</ul>
-				</nav>
-			</header>
-
-		<!-- Main -->
-			<section id="main" class="wrapper">
-				<div class="container box large">
-
-					<header class="major special">
-						<h2>Contact Us</h2>
-					</header>
-
-					<p>Find out more about Five Squared Interactive at <a href="https://fivesqd.com">https://fivesqd.com</a>.</p>
-					<p>For any questions or inquiries, please contact me at <a href="mailto:dylan@fivesquaredinteractive.com">dylan@fivesquaredinteractive.com</a>.</p>
-
-				</div>
-			</section>
-
 		<!-- Begin Footer -->
 			<div id="footer">
 				<div class="container">
@@ -86,15 +48,3 @@
 				</ul>
 			</div>
 		<!-- End Footer -->
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
