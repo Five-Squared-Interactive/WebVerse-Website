@@ -1,121 +1,198 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>WebVerse - Home</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/webverse-icon.png">
-	</head>
-	<body class="landing is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>WebVerse - Explore Worlds Like Websites</title>
 
-		<!-- Header -->
-			<header id="header" class="alt">
-			<h1><a href="index.html"><img src="images/webverse-text-small.png"></a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="https://github.com/Five-Squared-Interactive/WebVerse/wiki">Developer Wiki</a></li>
-						<li><a href="webverseapp.html" class="button">Try Now</a></li>
-					</ul>
-				</nav>
-			</header>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-		<!-- Banner -->
-			<section id="banner">
-				<div class="inner">
-					<h2>100% open framework for shared interactive experiences.</h2>
-					<p>You can start building the Metaverse now!</p>
-					<ul class="actions special">
-						<li><a href="webverseapp.html" class="button primary large">Try WebVerse</a></li>
-						<li><a href="https://github.com/Five-Squared-Interactive/WebVerse/wiki" class="button large">Learn More</a></li>
-					</ul>
-				</div>
-				<div>
-					<img src="images/WebVerse-Image.png" alt="" height=79% width=79% />
-				</div>
-			</section>
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
 
-		<!-- One -->
-			<section id="one" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-12-medium">
-							<h3 class="icon solid fa-code">Built on existing web technology</h3>
-							<p>No need to reinvent the wheel. Take advantage of the thousands and thousands of tools already built for the web.</p>
-						</div>
-						<div class="col-4 col-12-medium">
-							<h3 class="icon solid fa-globe">Web Metaverse is always available</h3>
-							<p>The metaverse will be there whenever you'd like to go into it. It doesn't matter where you are or on what device (Disclaimer: The Web Metaverse doesn't yet work on Mars).</p>
-						</div>
-						<div class="col-4 col-12-medium">
-							<h3 class="icon solid fa-mobile-alt">Decentralized to the core</h3>
-							<p>No one owns the Web Metaverse. As long as you can host a server, you can share your content with the rest of us. Being protocol-based, the Web Metaverse won't lock you into any one platform.</p>
-						</div>
-					</div>
-				</div>
-			</section>
+  <style>
+    body {
+      background: #0e1117;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      padding: 1rem 1rem;
+      text-align: center;
+    }
+    .cta-buttons button {
+      margin: 0.5rem;
+    }
+    .tech-card {
+      background: #1c1f26;
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+    .tech-card:hover {
+      transform: scale(1.02);
+    }
+    .linkable {
+      color: #00c8ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      border-top: 1px solid #333;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
 
-		<!-- Begin Footer -->
-			<div id="footer">
-				<div class="container">
-					<div class="row gtr-200">
-						<section class="col-4 col-12-medium about">
-							<h3>What is WebVerse?</h3>
-							<p>WebVerse is a reference implementation of the Web Metaverse concept, and for the protocols that will drive it. Put simply, the Web Metaverse uses the infrastructure and tools that already exist to exchange information about virtual worlds.</p>
-							<h3>Contact</h3>
-							<ul class="labeled-icons">
-								<li>
-									<h4 class="icon solid fa-envelope"><span class="label">Email</span></h4>
-									<a href="mailto:webverse@fivesquaredinteractive.com">webverse@fivesquaredinteractive.com</a>
-								</li>
-							</ul>
-							<ul class="actions">
-								<li><a href="about.html" class="button">Learn More</a></li>
-							</ul>
-						</section>
-						<section class="col-4 col-6-medium col-12-xsmall">
-							<h3>News</h3>
-							<ul class="updates">
-								<li>
-									<p>
-										<a href="https://medium.com/@dbaker5525/the-web-metaverse-the-case-for-an-open-standards-based-metaverse-428a2f619f39">The Web Metaverse: The Case for an Open Standards-Based Metaverse</a>
-									</p>
-									<span class="timestamp">May 29, 2024</span>
-								</li>
-							</ul>
-						</section>
-						<section class="col-4 col-6-medium col-12-xsmall">
-							<h3>Releases</h3>
-							<ul class="updates">
-								<li>
-									<p><a href="https://github.com/Five-Squared-Interactive/WebVerse/releases/tag/v2.1.4">Version 2.1.4</a></p>
-									<p><a href="https://github.com/Five-Squared-Interactive/WebVerse/releases/tag/v2.1.2">Version 2.1.2</a></p>
-									<p><a href="https://github.com/Five-Squared-Interactive/WebVerse/releases/tag/v2.1.1">Version 2.1.1</a></p>
-									<p><a href="https://github.com/Five-Squared-Interactive/WebVerse/releases">Older Releases...</a></p>
-								</li>
-							</ul>
-						</section>
-					</div>
-				</div>
-				<ul class="copyright">
-					<li>&copy; 2025 <a href="https://fivesqd.com">Five Squared Interactive</a>. All rights reserved.</li>
-					<li><a href="termsofservice.html">Terms of Use</a></li>
-					<li><a href="privacypolicy.html">Privacy Policy</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
-			</div>
-		<!-- End Footer -->
+<!-- 🪐 HERO SECTION -->
+<section class="hero" data-aos="fade-up">
+  <h1 class="display-4 text-info"><img src="images/WVLogo.png" width="379" /></h1>
+  <p class="lead">Explore Worlds Like Websites.</p>
+  <img 
+    src="images/WVPromo.gif" 
+    alt="Preview of WebVerse in action" 
+    class="img-fluid rounded shadow" 
+    style="max-width: 50%; height: auto;"
+  />
+  <p>Free and Open Source explorer for persistent, remixable 3D environments.</p>
+  <div class="cta-buttons">
+    <button class="btn btn-info text-dark" onclick="scrollToElement('try')">⭳ Get WebVerse</button>
+    <button class="btn btn-outline-info" onclick="scrollToElement('try')">🌐 Try WebVerse Online</button>
+    <button class="btn btn-secondary" onclick="window.location='https://github.com/Five-Squared-Interactive/WebWideWorlds/blob/main/docs/README.md'">📚 Learn More</button>
+  </div>
+</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- 🔍 WHAT IS WEBVERSE -->
+<section class="container py-5 text-center" data-aos="fade-up">
+  <h2 class="text-info">🔍 What Is WebVerse?</h2>
+  <p>WebVerse is the front end of the Web Wide Worlds framework—a tool for jumping between remixable, persistent 3D places using nothing but the web.</p>
+  <div class="row text-center">
+    <div class="col-md-4" data-aos="fade-up">
+      <div class="tech-card">🪄 <strong>Easy</strong><br>Build your own world in just minutes and share it with anyone!</div>
+    </div>
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="tech-card">🔓 <strong>Always Available</strong><br>Go into Web Wide Worlds anytime! It doesn't matter where you are or on what device.</div>
+    </div>
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="tech-card">🕸️ <strong>Decentralized</strong><br>No one owns Web Wide Worlds! You control what you create.</div>
+    </div>
+  </div>
+</section>
 
-	</body>
+<!-- 📦 TRY SECTION -->
+<section class="container py-5 text-center" data-aos="fade-up" id="try">
+  <h2 class="text-info text-center">▶️ Try WebVerse Now!</h2>
+  <p>Get started in Web Wide Worlds right in your browser, or download it onto your device.</p>
+  <div class="row gy-4 mt-4">
+    <div class="col-md-6">
+      <div class="tech-card text-center">
+        <i class="bi bi-download"></i>
+        <h4>Try WebVerse Lite Instantly:</h4>
+        <p>Run WebVerse Lite right in your browser. Works on PC, Mac, Linux, iOS, Android, and more!</p>
+        <a href="webverseapp.html" class="btn btn-info text-dark mt-2">WebVerse Lite</a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="tech-card text-center">
+        <i class="bi bi-file-earmark-code"></i>
+        <h4>Install WebVerse on Your Device:</h4>
+        <p>Get fully-featured WebVerse for free! Runs in desktop and VR modes. Current platforms: Windows.</p>
+        <a href="https://github.com/Five-Squared-Interactive/WebVerse/releases" class="btn btn-outline-info mt-2">Install WebVerse</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🛠 TECHNOLOGY STACK -->
+<section class="container py-5" data-aos="fade-up">
+  <h2 class="text-info text-center">🛠 Technology Stack</h2>
+  <div class="row gy-4">
+    <div class="col-md-6 col-lg-3" data-aos="fade-up">
+      <div class="tech-card">
+        <i class="bi bi-bricks"></i>
+        <h4>WebVerse</h4>
+        <p>The World Browser: Your portal to expansive digital worlds.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="tech-card">
+        <i class="bi bi-code-slash"></i>
+        <h4>WorldHub</h4>
+        <p>All-In-One place to explore, create, and share worlds.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+      <div class="tech-card">
+        <i class="bi bi-diagram-3"></i>
+        <h4>VEML</h4>
+        <p>Simple language for describing worlds: like HTML, but in 3D.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+      <div class="tech-card">
+        <i class="bi bi-globe"></i>
+        <h4>WorldOS</h4>
+        <p>Modular server framework for shared, flexible, and scalable worlds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 🏙 FEATURED WORLD -->
+<section class="container py-5" data-aos="zoom-in">
+  <h2 class="text-info text-center">🏙 Featured World: Aurelia</h2>
+  <p class="text-center"><strong>Aurelia</strong> is the first planet-scale world in Web Wide Worlds—an entire planet in which you can explore, build, and meet others.</p>
+  <p class="text-center">
+    <a href="#" class="linkable">🔗 Visit Aurelia</a>
+  </p>
+</section>
+
+<!-- 💬 COMMUNITY INVITE -->
+<section class="container py-5 text-center" data-aos="fade-up">
+  <h2 class="text-info">💬 Join the Community</h2>
+  <ul class="list-unstyled">
+    <li><img src="images/discordIcon.png" width="20px" /> <a href="https://discord.gg/nFHsWQt6" class="linkable">Web Wide Worlds Discord</a></li>
+    <!--<li><img src="images/mediumIcon.png" width="20px" /> <a href="https://medium.com/@dbaker5525" class="linkable">Follow on Medium</a></li>-->
+    <li><img src="images/githubIcon.png" width="20px" /> <a href="https://github.com/Five-Squared-Interactive" class="linkable">GitHub Repositories</a></li>
+    <!--<li><img src="images/youtubeIcon.png" width="20px" /> <a href="https://www.youtube.com/@fivesquaredinteractive" class="linkable">Subscribe for Updates</a></li>-->
+  </ul>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>Built by independent creators. Powered by open tools.</p>
+  <p>© 2025 <a href="https://fivesqd.com">Five Squared Interactive</a>. All rights reserved. | <a href="https://github.com/Five-Squared-Interactive">GitHub</a> | <a href="https://github.com/Five-Squared-Interactive/WebWideWorlds/blob/main/docs/README.md">Docs</a> | <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsofservice.html">Terms of Use</a></p>
+</footer>
+
+<!-- Bootstrap + AOS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+  function visitWorld() {
+    window.location.href = 'worldwide://aurelia.city'; // Replace with real world URL
+  }
+  function buildWorld() {
+    alert("Launching MetaWorld editor..."); // Replace with real link
+  }
+  function learnMore() {
+    window.location.href = '/about-webverse.html'; // Replace with About page
+  }
+
+  function scrollToElement(elementId) {
+    const targetElement = document.getElementById(elementId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' }); // Use scrollIntoView() for smooth scrolling
+    }
+  }
+</script>
+
+</body>
 </html>
