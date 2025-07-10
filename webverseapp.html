@@ -1,246 +1,249 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>WebVerse Web App</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/webverse-icon.png">
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="icon" href="images/webverse-icon.png">
+  <title>WebVerse Lite Viewer</title>
 
-		<!-- Header -->
-			<header id="header">
-				<h1><a id="logo" href="index.html"><img src="images/webverse-text-blue-small.png">Web App</span></a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="https://github.com/Five-Squared-Interactive/WebVerse/wiki">Developer Wiki</a></li>
-						<li><a href="webverseapp.html" class="button">Try Now</a></li>
-					</ul>
-				</nav>
-			</header>
+  <!-- Bootstrap CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-		<!-- Main -->
-			<section id="main" class="wrapper">
-				<div class="container box large">
-					<p>There are a variety of sample worlds you can try. You can also enter the address to a custom one in the URL box below.</p>
-					<hr>
-					<h2>Gullfoss</h2>
-					<img src="images/gullfoss-thumbnail.png" alt="" height=39% width=39% style="display: block; margin-left: auto; margin-right: auto;"  />
-					<p>This sample world contains Iceland's Gullfoss (which translates to "Golden Falls").
-						The 3D model was constructed using photogrammetry, so some shadows do exist. A simple character controller
-						is included with WASD movement, with the Q/Z keys used to ascend/descend.</p>
-					<p>Source: <a href="https://github.com/Five-Squared-Interactive/World-Samples/tree/main/Gullfoss">GitHub</a></p>
-					User Name:
-					<input type="text" id="glf_uname" style="width:39%;"></input>
-					<br>
-					<fieldset>
-                      <legend>Interface Mode:</legend>
-                        <div>
-                          <input type="radio" id="glf_keymouse" name="glf" value="keyboardAndMouse" checked />
-                          <label for="glf_keymouse">Keyboard and Mouse</label>
-                        </div>
-                        <div>
-                          <input type="radio" id="glf_touch" name="glf" value="touch" />
-                          <label for="glf_touch">Touch</label>
-                        </div>
-                    </fieldset>
-					<button onClick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Gullfoss/index.veml', 'glf', 'glf_uname')";>Try Now</button>
-					<hr>
-					<hr>
-					<h2>Simple Meshes Scene</h2>
-					<img src="images/simple-meshes-scene-thumbnail.png" alt="" height=39% width=39% style="display: block; margin-left: auto; margin-right: auto;"  />
-					<p>This is a very simple multi-user world. You can use the WASD keys to navigate around.</p>
-					<p>Source: <a href="https://github.com/Five-Squared-Interactive/World-Samples/tree/main/Simple-Meshes-Scene">GitHub</a></p>
-					User Name:
-					<input type="text" id="sms_uname" style="width:39%;"></input>
-					<br>
-					<fieldset>
-                      <legend>Interface Mode:</legend>
-                        <div>
-                          <input type="radio" id="sms_keymouse" name="sms" value="keyboardAndMouse" checked />
-                          <label for="sms_keymouse">Keyboard and Mouse</label>
-                        </div>
-                        <div>
-                          <input type="radio" id="sms_touch" name="sms" value="touch" />
-                          <label for="sms_touch">Touch</label>
-                        </div>
-                    </fieldset>
-					<button onClick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Simple-Meshes-Scene/index.veml', 'sms', 'sms_uname')";>Try Now</button>
-					<hr>
-					<h2>Rockefeller Plaza</h2>
-					<img src="images/rockefeller-plaza-thumbnail.png" alt="" height=39% width=39% style="display: block; margin-left: auto; margin-right: auto;"  />
-					<p>This world contains a simple 3D model of a large part of Rockefeller Plaza in New York City. You can use the WASD keys to navigate around. The models are large, so they might take a minute to load. Some smartphones may not be able to load this world due to RAM requirements.</p>
-					<p>Source: <a href="https://github.com/Five-Squared-Interactive/WebVerse-Samples/tree/main/Rockefeller-Plaza">GitHub</a></p>
-					User Name:
-					<input type="text" id="rfp_uname" style="width:39%;"></input>
-					<br>
-					<fieldset>
-                      <legend>Interface Mode:</legend>
-                        <div>
-                          <input type="radio" id="rfp_keymouse" name="rfp" value="keyboardAndMouse" checked />
-                          <label for="rfp_keymouse">Keyboard and Mouse</label>
-                        </div>
-                        <div>
-                          <input type="radio" id="rfp_touch" name="rfp" value="touch" />
-                          <label for="rfp_touch">Touch</label>
-                        </div>
-                    </fieldset>
-					<button onClick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Rockefeller-Plaza/index.veml', 'rfp', 'rfp_uname')";>Try Now</button>
-					<hr>
-					<h2>Columbus Circle</h2>
-					<img src="images/columbus-circle-thumbnail.png" alt="" height=39% width=39% style="display: block; margin-left: auto; margin-right: auto;"  />
-					<p>This world contains a simple 3D model of a large part of Columbus Circle in New York City. You can use the WASD keys to navigate around. The models are large, so they might take a minute to load. Some smartphones may not be able to load this world due to RAM requirements.</p>
-					<p>Source: <a href="https://github.com/Five-Squared-Interactive/World-Samples/tree/main/Columbus-Circle">GitHub</a></p>
-					User Name:
-					<input type="text" id="clc_uname" style="width:39%;"></input>
-					<br>
-					<fieldset>
-                      <legend>Interface Mode:</legend>
-                        <div>
-                          <input type="radio" id="clc_keymouse" name="clc" value="keyboardAndMouse" checked />
-                          <label for="clc_keymouse">Keyboard and Mouse</label>
-                        </div>
-                        <div>
-                          <input type="radio" id="clc_touch" name="clc" value="touch" />
-                          <label for="clc_touch">Touch</label>
-                        </div>
-                    </fieldset>
-					<button onClick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Columbus-Circle/index.veml', 'clc', 'clc_uname')";>Try Now</button>
-					<hr>
-					<h2>Washington DC</h2>
-					<img src="images/washington-dc-thumbnail.png" alt="" height=39% width=39% style="display: block; margin-left: auto; margin-right: auto;"  />
-					<p>This world contains a simple 3D model of the US Capitol. You can use the WASD keys to navigate around. The models are large, so they might take a minute to load. Some smartphones may not be able to load this world due to RAM requirements.</p>
-					<p>Source: <a href="https://github.com/Five-Squared-Interactive/World-Samples/tree/main/Washington-DC">GitHub</a></p>
-					User Name:
-					<input type="text" id="wdc_uname" style="width:39%;"></input>
-					<br>
-					<fieldset>
-                      <legend>Interface Mode:</legend>
-                        <div>
-                          <input type="radio" id="wdc_keymouse" name="wdc" value="keyboardAndMouse" checked />
-                          <label for="wdc_keymouse">Keyboard and Mouse</label>
-                        </div>
-                        <div>
-                          <input type="radio" id="wdc_touch" name="wdc" value="touch" />
-                          <label for="wdc_touch">Touch</label>
-                        </div>
-                    </fieldset>
-					<button onClick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Washington-DC/index.veml', 'wdc', 'wdc_uname')";>Try Now</button>
-					<hr>
-					<h2>Small Town</h2>
-					<img src="images/small-town-thumbnail.png" alt="" height=39% width=39% style="display: block; margin-left: auto; margin-right: auto;"  />
-					<p>This is similar to Basic World. You can use the WASD keys to navigate around. The models are large, so they might take a minute to load. Some smartphones may not be able to load this world due to RAM requirements.</p>
-					<p>Source: <a href="https://github.com/Five-Squared-Interactive/World-Samples/tree/main/Small-Town">GitHub</a></p>
-					User Name:
-					<input type="text" id="st_uname" style="width:39%;"></input>
-					<br>
-					<fieldset>
-                      <legend>Interface Mode:</legend>
-                        <div>
-                          <input type="radio" id="st_keymouse" name="st" value="keyboardAndMouse" checked />
-                          <label for="st_keymouse">Keyboard and Mouse</label>
-                        </div>
-                        <div>
-                          <input type="radio" id="st_touch" name="st" value="touch" />
-                          <label for="st_touch">Touch</label>
-                        </div>
-                    </fieldset>
-					<button onClick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Small-Town/index.veml', 'st', 'st_uname')";>Try Now</button>
-					<hr>
-					<p>Enter any other world's address:</p>
-					<input id="browserinput" style="width: 75%;"></input>
-					<button onClick="RegisterInput();">Go</button>
-					<br>
-					<a href="apphelp.html" target="_blank">Having trouble?</a>
-					<embed id="browser" type="text/html" src="webverseapp-placeholder.html" width="100%" height="525">
-					<button><img src="images/arrow-expand-all.png" height=79% width=79% onClick="OpenTab();"></button>
-					<p>Thank you for trying WebVerse. The web application is a quick and easy way to get started in the Web Metaverse. A <a href="https://github.com/Five-Squared-Interactive/WebVerse/releases">higher fidelity standalone version</a> is available (with VR support). The web application works with the same worlds as the standalone version (with reduced performance).</p>
-				</div>
-			</section>
+  <style>
+    body {
+      background: #0e1117;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .viewer-section iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 8px;
+    }
+    .url-input {
+      margin-bottom: 1rem;
+    }
+    .world-list {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+    .world-card {
+      background: #1c1f26;
+      border-radius: 8px;
+      width: 300px;
+      padding: 1rem;
+      flex: 0 0 auto;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    }
+    .world-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .btn-enter {
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+    footer {
+      border-top: 1px solid #333;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .world-iframe-container {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ddd;
+      border-radius: 8px 8px 0 0;
+      overflow: hidden;
+    }
+    .world-iframe {
+      width: 100%;
+      height: 100%;
+    }
+    .world-toolbar {
+      background: #f8f9fa;
+      border: 1px solid #ddd;
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+    .toolbar-label {
+      font-weight: 500;
+      font-size: 14px;
+      color: #495057;
+    }
+    .world-list::-webkit-scrollbar {
+    height: 8px;
+  }
+  .world-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .world-list::-webkit-scrollbar-thumb {
+    background: #00c8ff;
+    border-radius: 4px;
+  }
+  .world-list::-webkit-scrollbar-thumb:hover {
+    background: #00a0cc;
+  }
+  </style>
+</head>
+<body class="container py-4">
+  <div class="text-center">
+    <h1 class="text-info mb-3"><a href="index.html"><img src="images/WVLiteLogo.png" width="379" /></a></h1>
+    <p>Explore 3D spaces right from your browser. Choose a world below or enter a custom URL.</p>
+  </div>
 
-		<!-- Begin Footer -->
-			<div id="footer">
-				<div class="container">
-					<div class="row gtr-200">
-						<section class="col-4 col-12-medium about">
-							<h3>What is WebVerse?</h3>
-							<p>WebVerse is a reference implementation of the Web Metaverse concept, and for the protocols that will drive it. Put simply, the Web Metaverse uses the infrastructure and tools that already exist to exchange information about virtual worlds.</p>
-							<h3>Contact</h3>
-							<ul class="labeled-icons">
-								<li>
-									<h4 class="icon solid fa-envelope"><span class="label">Email</span></h4>
-									<a href="mailto:webverse@fivesquaredinteractive.com">webverse@fivesquaredinteractive.com</a>
-								</li>
-							</ul>
-							<ul class="actions">
-								<li><a href="about.html" class="button">Learn More</a></li>
-							</ul>
-						</section>
-						<section class="col-4 col-6-medium col-12-xsmall">
-							<h3>News</h3>
-							<ul class="updates">
-								<li>
-									<p>
-										<a href="https://medium.com/@dbaker5525/the-web-metaverse-the-case-for-an-open-standards-based-metaverse-428a2f619f39">The Web Metaverse: The Case for an Open Standards-Based Metaverse</a>
-									</p>
-									<span class="timestamp">May 29, 2024</span>
-								</li>
-							</ul>
-						</section>
-						<section class="col-4 col-6-medium col-12-xsmall">
-							<h3>Releases</h3>
-							<ul class="updates">
-								<li>
-									<p><a href="https://github.com/Five-Squared-Interactive/WebVerse/releases/tag/v2.1.4">Version 2.1.4</a></p>
-									<p><a href="https://github.com/Five-Squared-Interactive/WebVerse/releases/tag/v2.1.2">Version 2.1.2</a></p>
-									<p><a href="https://github.com/Five-Squared-Interactive/WebVerse/releases/tag/v2.1.1">Version 2.1.1</a></p>
-									<p><a href="https://github.com/Five-Squared-Interactive/WebVerse/releases">Older Releases...</a></p>
-								</li>
-							</ul>
-						</section>
-					</div>
-				</div>
-				<ul class="copyright">
-					<li>&copy; 2025 <a href="https://fivesqd.com">Five Squared Interactive</a>. All rights reserved.</li>
-					<li><a href="termsofservice.html">Terms of Use</a></li>
-					<li><a href="privacypolicy.html">Privacy Policy</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
-			</div>
-		<!-- End Footer -->
+  <!-- URL Input -->
+  <div class="url-input">
+    <label for="urlField" class="form-label">Enter World URL:</label>
+    <div class="input-group">
+      <input type="text" id="urlField" class="form-control" placeholder="Your World's Address Here"/>
+      <button class="btn btn-info text-dark" onclick="loadCustomWorld()">Load</button>
+    </div>
+  </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script>
-				function LoadWorldPreset(worldAddress, ifInput, unameInput) {
-					var interfaceMode = document.querySelector('input[name="' + ifInput + '"]:checked').value;
+  <!-- Viewer -->
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10">
+      <!-- IFrame -->
+      <div class="world-iframe-container mb-0">
+        <iframe id="webverseFrame" src="webverseapp-placeholder.html" class="world-iframe" frameborder="0"></iframe>
+      </div>
+      
+      <!-- Toolbar -->
+      <div class="world-toolbar">
+        <span class="toolbar-label">WebVerse Lite</span>
+        <button class="btn btn-outline-secondary btn-sm" id="fullscreenBtn" onclick="OpenTab()">
+          <i class="fas fa-expand"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <a href="apphelp.html">Having Trouble?</a>
+
+  <!-- World Gallery -->
+  <h2 class="text-info mt-5">🪐 Featured Worlds</h2>
+  
+  <!-- Username Input -->
+  <div class="mb-3">
+    <label for="usernameInput" class="form-label">Your Username</label>
+    <input type="text" class="form-control" id="usernameInput" placeholder="e.g. WebWideWorldsPioneer">
+  </div>
+  
+  <!-- Device Mode Toggle -->
+  <div class="form-check form-switch mb-3">
+    <input class="form-check-input" type="checkbox" id="inputToggle" onchange="handleInputMode(this)">
+    <label class="form-check-label" for="inputToggle">Touch Mode</label>
+  </div>
+  
+  <div class="world-list">
+    <div class="world-card">
+      <img src="images/gullfoss-thumbnail.png" alt="Gullfoss Preview"/>
+      <h5 class="mt-2 text-info">Gullfoss</h5>
+      <p>This sample world contains Iceland's Gullfoss (which translates to "Golden Falls"). The 3D model was constructed using photogrammetry, so some shadows do exist. A simple character controller is included with WASD movement, with the Q/Z keys used to ascend/descend.</p>
+	  <p>Source: <a href="https://github.com/Five-Squared-Interactive/World-Samples/tree/main/Gullfoss">GitHub</a></p>
+      <button class="btn btn-outline-info btn-enter" onclick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Gullfoss/index.veml')">Enter World</button>
+    </div>
+
+    <div class="world-card">
+      <img src="images/simple-meshes-scene-thumbnail.png" alt="Simple Meshes Scene Preview"/>
+      <h5 class="mt-2 text-info">Simple Meshes Scene</h5>
+      <p>This is a very simple multi-user world. You can use the WASD keys to navigate around.</p>
+	  <p>Source: <a href="https://github.com/Five-Squared-Interactive/World-Samples/tree/main/Simple-Meshes-Scene">GitHub</a></p>
+      <button class="btn btn-outline-info btn-enter" onclick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Simple-Meshes-Scene/index.veml')">Enter World</button>
+    </div>
+	
+	<div class="world-card">
+      <img src="images/rockefeller-plaza-thumbnail.png" alt="Rockefeller Plaza Preview"/>
+      <h5 class="mt-2 text-info">Rockefeller Plaza</h5>
+      <p>This world contains a simple 3D model of a large part of Rockefeller Plaza in New York City. You can use the WASD keys to navigate around. The models are large, so they might take a minute to load. Some smartphones may not be able to load this world due to RAM requirements.</p>
+	  <p>Source: <a href="https://github.com/Five-Squared-Interactive/WebVerse-Samples/tree/main/Rockefeller-Plaza">GitHub</a></p>
+      <button class="btn btn-outline-info btn-enter" onclick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Rockefeller-Plaza/index.veml')">Enter World</button>
+    </div>
+
+    <div class="world-card">
+      <img src="images/columbus-circle-thumbnail.png" alt="Columbus Circle Preview"/>
+      <h5 class="mt-2 text-info">Columbus Circle</h5>
+      <p>This world contains a simple 3D model of a large part of Columbus Circle in New York City. You can use the WASD keys to navigate around. The models are large, so they might take a minute to load. Some smartphones may not be able to load this world due to RAM requirements.</p>
+	  <p>Source: <a href="https://github.com/Five-Squared-Interactive/World-Samples/tree/main/Columbus-Circle">GitHub</a></p>
+      <button class="btn btn-outline-info btn-enter" onclick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Columbus-Circle/index.veml')">Enter World</button>
+    </div>
+	
+	<div class="world-card">
+      <img src="images/washington-dc-thumbnail.png" alt="Washington DC Preview"/>
+      <h5 class="mt-2 text-info">Washington DC</h5>
+      <p>This world contains a simple 3D model of the US Capitol. You can use the WASD keys to navigate around. The models are large, so they might take a minute to load. Some smartphones may not be able to load this world due to RAM requirements.</p>
+	  <p>Source: <a href="https://github.com/Five-Squared-Interactive/World-Samples/tree/main/Washington-DC">GitHub</a></p>
+      <button class="btn btn-outline-info btn-enter" onclick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Washington-DC/index.veml')">Enter World</button>
+    </div>
+
+    <div class="world-card">
+      <img src="images/small-town-thumbnail.png" alt="Small Town Preview"/>
+      <h5 class="mt-2 text-info">Small Town</h5>
+      <p>This is similar to Basic World. You can use the WASD keys to navigate around. The models are large, so they might take a minute to load. Some smartphones may not be able to load this world due to RAM requirements.</p>
+	  <p>Source: <a href="https://github.com/Five-Squared-Interactive/World-Samples/tree/main/Small-Town">GitHub</a></p>
+      <button class="btn btn-outline-info btn-enter" onclick="LoadWorldPreset('https://webverse-samples.s3.amazonaws.com/Small-Town/index.veml')">Enter World</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Built by independent creators. Powered by open tools.</p>
+    <p>© 2025 <a href="https://fivesqd.com">Five Squared Interactive</a>. All rights reserved. | <a href="https://github.com/Five-Squared-Interactive">GitHub</a> | <a href="https://github.com/Five-Squared-Interactive/WebWideWorlds/blob/main/docs/README.md">Docs</a> | <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsofservice.html">Terms of Use</a></p>
+  </footer>
+
+  <!-- JS Logic -->
+  <script>
+    function loadWorld(url) {
+      document.getElementById('webverseFrame').src = url;
+    }
+    function loadCustomWorld() {
+      const url = document.getElementById('urlField').value;
+      if (url) {
+        LoadWorld(url);
+      }
+    }
+
+    function LoadWorldPreset(worldAddress, ifInput, unameInput) {
 					var ifMode = "desktop";
-					if (interfaceMode == "touch") {
-					    ifMode = "mobile";
+	                var inputToggle = document.getElementById("inputToggle");
+					if (inputToggle != null) {
+					    if (inputToggle.checked == true) {
+						    ifMode = "mobile";
+						}
 					}
+					//var interfaceMode = document.querySelector('input[name="' + ifInput + '"]:checked').value;
+					//var ifMode = "desktop";
+					//if (interfaceMode == "touch") {
+					//    ifMode = "mobile";
+					//}
 					
-					var unameInput = document.getElementById(unameInput);
+					var unameInput = document.getElementById("usernameInput");
 					
 					LoadWorld(worldAddress + "?IF_MODE=" + ifMode + "%26USER_NAME=" + unameInput.value);
-					document.getElementById("browser").scrollIntoView();
+					document.getElementById("webverseFrame").scrollIntoView();
 				}
 				
 				function LoadWorld(address) {
-					var browser = document.getElementById("browser");
+					var browser = document.getElementById("webverseFrame");
 					if (browser != null) {
 						var newBrowser = browser.cloneNode(true);
-						newBrowser.setAttribute("src", 'https://webverse-webgl.s3.amazonaws.com/WebGL/index.html?main_app_id=00000000-0000-0000-0000-000000000000&daemon_port=5525&max_entries=2048&max_entry_length=2048&max_key_length=512&tab_id=100&files_directory=files&world_load_timeout=300&world_url=' + address);
+						newBrowser.setAttribute("src", 'https://webverse-webgl.s3.amazonaws.com/WebGL/index.html?=main_app_id=00000000-0000-0000-0000-000000000000&daemon_port=5525&max_entries=2048&max_entry_length=2048&max_key_length=512&tab_id=100&files_directory=files&world_load_timeout=300&world_url=' + address);
 						browser.parentNode.replaceChild(newBrowser, browser);
-						var input = document.getElementById("browserinput");
+						var input = document.getElementById("urlField");
 						if (input != null) {
 							input.value = address;
 						}
@@ -248,7 +251,7 @@
 				}
 				
 				function RegisterInput() {
-					var input = document.getElementById("browserinput");
+					var input = document.getElementById("urlField");
 					if (input != null) {
 						if (input.value != null && input.value != "") {
 							LoadWorld(input.value);
@@ -257,12 +260,19 @@
 				}
 				
 				function OpenTab() {
-					var input = document.getElementById("browserinput");
+					var input = document.getElementById("urlField");
 					if (input != null) {
 						window.location.assign('https://webverse-webgl.s3.amazonaws.com/WebGL/index.html?main_app_id=00000000-0000-0000-0000-000000000000&daemon_port=5525&max_entries=2048&max_entry_length=2048&max_key_length=512&tab_id=100&files_directory=files&world_load_timeout=300&world_url=' + input.value);
 					}
 				}
-			</script>
+				function handleInputMode(toggle) {
+  const mode = toggle.checked ? "touch" : "desktop";
+  console.log("Switched to:", mode);
 
-	</body>
+  // Example: adjust camera sensitivity or UI layout
+  document.body.setAttribute("data-input-mode", mode);
+}
+  </script>
+
+</body>
 </html>
