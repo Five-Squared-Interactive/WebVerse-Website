@@ -272,6 +272,16 @@
   // Example: adjust camera sensitivity or UI layout
   document.body.setAttribute("data-input-mode", mode);
 }
+	  
+	  function isMobileUserAgent() {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        return /android|ipad|iphone|ipod|mobile|tablet/i.test(userAgent);
+    }
+
+	  var inputToggle = document.getElementById(inputToggle);
+	  if (isMobileUserAgent()) {
+		inputToggle.checked = true;
+	  }
   </script>
 
 </body>
