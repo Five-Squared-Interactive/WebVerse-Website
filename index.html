@@ -5,77 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="icon" href="images/webverse-icon.png">
   <title>WebVerse — the client for worlds that are web pages</title>
-  <meta name="description" content="A world is a document at a URL. WebVerse is the web page that opens it, on a phone or a laptop, with nothing to install. Open source, MIT." />
+  <meta name="description" content="A world is a document at a URL. WebVerse is the web page that opens it, on a phone, a laptop or a headset's browser, with nothing to install. Open source, MIT." />
+  <meta property="og:title" content="WebVerse — the client for worlds that are web pages" />
+  <meta property="og:description" content="A world is a document at a URL. WebVerse is the web page that opens it, with nothing to install." />
+  <meta property="og:image" content="https://webverse.fivesqd.com/images/world-overlook-hero.webp" />
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS and icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
   <style>
-    body {
-      background: #0e1117;
-      color: #eee;
-      font-family: 'Segoe UI', sans-serif;
-      scroll-behavior: smooth;
-    }
+    body { background: #0e1117; color: #eee; font-family: 'Segoe UI', system-ui, sans-serif; scroll-behavior: smooth; }
     .hero {
-      padding: 3rem 1rem 1rem;
-      text-align: center;
+      position: relative; min-height: 72vh; display: flex; align-items: center; text-align: center;
+      background: url('images/world-overlook-hero.webp') center / cover no-repeat;
     }
-    .hero p.lead { max-width: 40rem; margin: 1rem auto; }
-    .cta-buttons a { margin: 0.5rem; }
-    .tech-card {
-      background: #1c1f26;
-      border-radius: 8px;
-      padding: 1.5rem;
-      height: 100%;
-    }
-    .linkable {
-      color: #00c8ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,12,18,.35), rgba(10,12,18,.8)); }
+    .hero > .container { position: relative; z-index: 1; }
+    .hero img.logo { width: min(379px, 70vw); height: auto; }
+    .hero p.lead { max-width: 40rem; margin: 1rem auto; font-size: 1.35rem; }
+    .hero .caption { color: rgba(255,255,255,.65); font-size: .9rem; margin-top: 1rem; }
+    .cta-buttons a { margin: .4rem; }
+    .tech-card { background: #1c1f26; border-radius: 12px; padding: 1.5rem; height: 100%; }
+    .tech-card .bi { font-size: 2rem; color: #00c8ff; display: block; margin-bottom: .6rem; }
+    .tech-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: .4rem; }
+    .linkable { color: #00c8ff; text-decoration: none; font-weight: bold; }
     .narrow { max-width: 44rem; margin-left: auto; margin-right: auto; }
-    footer {
-      border-top: 1px solid #333;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
+    .world-frame { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,.45); }
+    pre.doc { background: #1c1f26; color: #d7dde8; border-radius: 12px; padding: 1rem; font-size: .78rem; line-height: 1.45; max-height: 426px; overflow: auto; margin: 0; }
+    figcaption { color: rgba(255,255,255,.65); font-size: .9rem; margin-top: .6rem; }
+    .logo-strip img { max-height: 72px; background: #141821; border-radius: 10px; padding: .6rem 1rem; }
+    footer { border-top: 1px solid #333; padding: 2rem; text-align: center; font-size: .9rem; }
+    footer a { color: #9bd3ff; }
   </style>
 </head>
 <body>
+<main>
 
 <!-- The words: COPY-v4.md. The demo link is filled in when a public world
      exists; until then the button is left out rather than pointed at a 404. -->
-<main>
 <section class="hero">
-  <h1 class="display-4 text-info"><a href="index.html"><img src="images/WVLogo.png" width="379" alt="WebVerse" /></a></h1>
-  <p class="lead">The client for worlds that are web pages.</p>
-  <p class="narrow">
-    A world is a document at a URL. WebVerse is the page that opens it: on a phone, a laptop or a
-    headset's browser, with nothing to install. Every published world's link opens WebVerse already
-    pointed at that world, so most people use it without ever visiting this page.
-  </p>
-  <div class="cta-buttons">
-    <!-- <a href="{DEMO_WORLD_URL}" class="btn btn-info text-dark">Walk into a world</a> -->
-    <a href="https://fivesqd.com/first-world" class="btn btn-outline-info">Make your own</a>
+  <div class="container py-5">
+    <a href="index.html"><img class="logo" src="images/WVLogo.png" alt="WebVerse" /></a>
+    <p class="lead">The client for worlds that are web pages.</p>
+    <p class="narrow">
+      A world is a document at a URL. WebVerse is the page that opens it: on a phone, a laptop or a
+      headset's browser, with nothing to install. Every published world's link opens WebVerse already
+      pointed at that world, so most people use it without ever visiting this page.
+    </p>
+    <div class="cta-buttons">
+      <!-- <a href="{DEMO_WORLD_URL}" class="btn btn-info text-dark btn-lg"><i class="bi bi-door-open"></i> Walk into a world</a> -->
+      <a href="https://fivesqd.com/first-world" class="btn btn-outline-info btn-lg"><i class="bi bi-box-arrow-up-right"></i> Make your own</a>
+    </div>
+    <p class="caption">The Overlook, a world opened in WebVerse.</p>
   </div>
 </section>
 
 <section class="container py-5">
-  <h2 class="text-info text-center">What it does</h2>
-  <div class="row gy-4 mt-2">
+  <h2 class="text-info text-center mb-4">What it does</h2>
+  <div class="row gy-4">
     <div class="col-md-6 col-lg-3">
-      <div class="tech-card"><h3 class="h5">Opens any world by its address</h3>and follows links from one world into another.</div>
+      <div class="tech-card"><i class="bi bi-link-45deg"></i><h3>Opens any world by its address</h3>and follows links from one world into another.</div>
     </div>
     <div class="col-md-6 col-lg-3">
-      <div class="tech-card"><h3 class="h5">Puts visitors in the same room</h3>Others appear, and move, as they move.</div>
+      <div class="tech-card"><i class="bi bi-people"></i><h3>Puts visitors in the same room</h3>Others appear, and move, as they move.</div>
     </div>
     <div class="col-md-6 col-lg-3">
-      <div class="tech-card"><h3 class="h5">Runs a world's scripts in a sandbox</h3>so a world can do things and cannot reach outside.</div>
+      <div class="tech-card"><i class="bi bi-shield-lock"></i><h3>Runs a world's scripts in a sandbox</h3>so a world can do things and cannot reach outside.</div>
     </div>
     <div class="col-md-6 col-lg-3">
-      <div class="tech-card"><h3 class="h5">Shows something walkable first</h3>and fills in the detail while you are already there.</div>
+      <div class="tech-card"><i class="bi bi-lightning-charge"></i><h3>Shows something walkable first</h3>and fills in the detail while you are already there.</div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="text-info text-center">The whole world, and the whole document</h2>
+  <p class="text-center narrow mb-4">Everything the world on the left is made of is the text on the right.</p>
+  <div class="row gy-4 align-items-start">
+    <div class="col-lg-6">
+      <figure class="m-0">
+        <img class="world-frame" src="images/world-overlook-card.webp" width="800" height="426" alt="A cabin at sunset with a campfire and trees: The Overlook, a world opened in WebVerse" loading="lazy" />
+        <figcaption>A world, opened in a browser.</figcaption>
+      </figure>
+    </div>
+    <div class="col-lg-6">
+      <figure class="m-0">
+<pre class="doc" aria-label="The complete document of a published world"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;veml xmlns="http://www.fivesqd.com/schemas/veml/4.0"
+      xmlns:env="http://www.fivesqd.com/schemas/veml/4.0/profiles/environment"
+      version="4.0"&gt;
+  &lt;metadata&gt;
+    &lt;title&gt;Living Room&lt;/title&gt;
+    &lt;profile&gt;lighting&lt;/profile&gt;
+    &lt;profile&gt;environment&lt;/profile&gt;
+  &lt;/metadata&gt;
+  &lt;environment&gt;
+    &lt;background color="#404040ff"/&gt;
+    &lt;entry-point id="default"&gt;
+      &lt;position x="3" y="0.1" z="5"/&gt;
+      &lt;rotation x="0" y="0.346936" z="0" w="0.937889"/&gt;
+    &lt;/entry-point&gt;
+    &lt;env:environment-map src="assets/sky.a96a6d688f.png"
+      intensity="9.24" diffuse="4.62" specular="0.15"
+      glazing-boost="10.7" glazing-f0="0.6" punctual-lights="exclude"/&gt;
+    &lt;asset tag="model" src="assets/model.9002eb17ad.glb"&gt;
+      &lt;transform&gt;
+        &lt;position x="0" y="0" z="0"/&gt;
+        &lt;rotation x="0" y="0" z="0" w="1"/&gt;
+        &lt;scale x="1" y="1" z="1"/&gt;
+      &lt;/transform&gt;
+    &lt;/asset&gt;
+  &lt;/environment&gt;
+&lt;/veml&gt;</code></pre>
+        <figcaption>A published world's document: a title, a sky, where you start, the model it loads. The model is a standard glTF file. There is nothing else.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -91,10 +135,14 @@
 
 <section class="container py-5 text-center">
   <h2 class="text-info">Open source</h2>
+  <div class="logo-strip d-flex justify-content-center gap-3 flex-wrap my-3">
+    <img src="images/webverse-icon.png" alt="WebVerse" />
+    <img src="images/StraightFourLogo.webp" alt="StraightFour, the engine under WebVerse" />
+  </div>
   <p class="narrow">
     WebVerse and the engine under it, StraightFour, are MIT-licensed. The public release of the
     current generation is being prepared; the earlier generation is at
-    <a href="https://github.com/Five-Squared-Interactive" class="linkable">github.com/Five-Squared-Interactive</a>.
+    <a href="https://github.com/Five-Squared-Interactive" class="linkable"><i class="bi bi-github"></i> github.com/Five-Squared-Interactive</a>.
   </p>
   <p class="narrow" style="opacity:.8">
     Looking for the earlier WebVerse (2.1.x, the Windows build and the "Lite" viewer)? It is
