@@ -35,6 +35,17 @@
     pre.doc { background: #1c1f26; color: #d7dde8; border-radius: 12px; padding: 1rem; font-size: .78rem; line-height: 1.45; max-height: 426px; overflow: auto; margin: 0; }
     figcaption { color: rgba(255,255,255,.65); font-size: .9rem; margin-top: .6rem; }
     .logo-strip img { max-height: 72px; background: #141821; border-radius: 10px; padding: .6rem 1rem; }
+    .analogy { max-width: 820px; border: 1px solid #2a2f3a; border-radius: 14px; overflow: hidden; background: #1c1f26; text-align: left; }
+    .analogy-head, .analogy-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: .4rem 1rem; align-items: center; padding: .8rem 1.1rem; }
+    .analogy-head { background: #141821; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: .78rem; color: #9bd3ff; }
+    .analogy-row { border-top: 1px solid #2a2f3a; }
+    .analogy-row .analogy-what { grid-column: 1 / -1; font-size: .9rem; opacity: .7; }
+    .analogy-arrow { color: #00c8ff; }
+    .analogy-world { font-weight: 600; }
+    @media (min-width: 720px) {
+      .analogy-head, .analogy-row { grid-template-columns: 1.1fr auto 1.1fr 1.4fr; }
+      .analogy-row .analogy-what { grid-column: auto; }
+    }
     footer { border-top: 1px solid #333; padding: 2rem; text-align: center; font-size: .9rem; }
     footer a { color: #9bd3ff; }
   </style>
@@ -76,6 +87,19 @@
     <div class="col-md-6 col-lg-3">
       <div class="tech-card"><i class="bi bi-lightning-charge"></i><h3>Shows something walkable first</h3>and fills in the detail while you are already there.</div>
     </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="text-info text-center">The same machinery as the web</h2>
+  <p class="text-center narrow mb-4">Not a metaphor. Each part of a world is the part of a web page it stands in for.</p>
+  <div class="analogy mx-auto">
+    <div class="analogy-head"><span>A web page</span><span></span><span>A world</span><span></span></div>
+    <div class="analogy-row"><span>An HTML file</span><span class="analogy-arrow">&#8646;</span><span class="analogy-world">A VEML file</span><span class="analogy-what">says what is there and where</span></div>
+    <div class="analogy-row"><span>A web browser</span><span class="analogy-arrow">&#8646;</span><span class="analogy-world">WebVerse, a web page itself</span><span class="analogy-what">opens it from its address</span></div>
+    <div class="analogy-row"><span>Any web host</span><span class="analogy-arrow">&#8646;</span><span class="analogy-world">Any web host</span><span class="analogy-what">serves the files; nothing of ours in between</span></div>
+    <div class="analogy-row"><span>A link to another page</span><span class="analogy-arrow">&#8646;</span><span class="analogy-world">A door to another world</span><span class="analogy-what">joins one address to the next</span></div>
+    <div class="analogy-row"><span>View source</span><span class="analogy-arrow">&#8646;</span><span class="analogy-world">Open the document</span><span class="analogy-what">the whole thing, as text</span></div>
   </div>
 </section>
 
