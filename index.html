@@ -4,196 +4,232 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="icon" href="images/webverse-icon.png">
-  <title>WebVerse - Explore Worlds Like Websites</title>
+  <title>WebVerse — the client for worlds that are web pages</title>
+  <meta name="description" content="A world is a document at a URL. WebVerse is the web page that opens it, on a phone, a laptop or a headset's browser, with nothing to install. Open any world by its address." />
+  <link rel="canonical" href="https://webverse.fivesqd.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://webverse.fivesqd.com/" />
+  <meta property="og:title" content="WebVerse — the client for worlds that are web pages" />
+  <meta property="og:description" content="A world is a document at a URL. WebVerse is the web page that opens it, with nothing to install." />
+  <meta property="og:image" content="https://webverse.fivesqd.com/images/og-webverse.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WebVerse — the client for worlds that are web pages" />
+  <meta name="twitter:description" content="A world is a document at a URL. WebVerse is the web page that opens it, with nothing to install." />
+  <meta name="twitter:image" content="https://webverse.fivesqd.com/images/og-webverse.png" />
 
-  <!-- Bootstrap CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- AOS Animation CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-
-  <style>
-    body {
-      background: #0e1117;
-      color: #eee;
-      font-family: 'Segoe UI', sans-serif;
-      scroll-behavior: smooth;
-    }
-    .hero {
-      padding: 1rem 1rem;
-      text-align: center;
-    }
-    .cta-buttons button {
-      margin: 0.5rem;
-    }
-    .tech-card {
-      background: #1c1f26;
-      border-radius: 8px;
-      padding: 1.5rem;
-      height: 100%;
-      transition: transform 0.3s ease;
-    }
-    .tech-card:hover {
-      transform: scale(1.02);
-    }
-    .linkable {
-      color: #00c8ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      border-top: 1px solid #333;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/v4.css" rel="stylesheet">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<!-- 🪐 HERO SECTION -->
-<section class="hero" data-aos="fade-up">
-  <h1 class="display-4 text-info"><a href="index.html"><img src="images/WVLogo.png" width="379" /></a></h1>
-  <p class="lead">Explore Worlds Like Websites.</p>
-  <img 
-    src="images/WVPromo.gif" 
-    alt="Preview of WebVerse in action" 
-    class="img-fluid rounded shadow" 
-    style="max-width: 50%; height: auto;"
-  />
-  <p>Free and Open Source explorer for persistent, remixable 3D environments.</p>
-  <div class="cta-buttons">
-    <button class="btn btn-info text-dark" onclick="scrollToElement('try')">⭳ Get WebVerse</button>
-    <button class="btn btn-outline-info" onclick="scrollToElement('try')">🌐 Try WebVerse Online</button>
-    <button class="btn btn-secondary" onclick="window.location='https://github.com/Five-Squared-Interactive/WebWideWorlds/blob/main/docs/README.md'">📚 Learn More</button>
+<header class="topbar">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a class="brand" href="index.html"><img src="images/webverse-icon.png" alt="" width="28" height="28"> WebVerse</a>
+    <nav aria-label="Site">
+      <a href="#open">Open a world</a>
+      <a href="#controls">Controls</a>
+      <a href="https://fivesqd.com/technology">How it works</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn-nav" href="https://fivesqd.com/first-world">Make a world</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- The words: COPY-v4.md. The demo link is filled in when a public world
+     exists; until then the button is left out rather than pointed at a 404. -->
+<section class="hero">
+  <div class="container py-5">
+    <h1><img class="logo" src="images/WVLogo.png" alt="WebVerse" /></h1>
+    <p class="lead">The client for worlds that are web pages.</p>
+    <p class="narrow">
+      A world is a document at a URL. WebVerse is the page that opens it: on a phone, a laptop or a
+      headset's browser, with nothing to install. Every published world's link opens WebVerse already
+      pointed at that world.
+    </p>
+    <div class="cta-buttons">
+      <!-- <a href="{DEMO_WORLD_URL}" class="btn btn-primary btn-lg"><i class="bi bi-door-open"></i> Walk into a world</a> -->
+      <a href="https://worlds.worldhub.me/webverse/index.html" class="btn btn-primary btn-lg"><i class="bi bi-box-arrow-up-right"></i> Open WebVerse</a>
+      <a href="#open" class="btn btn-outline-light btn-lg"><i class="bi bi-link-45deg"></i> Open a world by its address</a>
+    </div>
+    <p class="caption">The Overlook, a world opened in WebVerse.</p>
   </div>
 </section>
 
-<!-- 🔍 WHAT IS WEBVERSE -->
-<section class="container py-5 text-center" data-aos="fade-up">
-  <h2 class="text-info">🔍 What Is WebVerse?</h2>
-  <p>WebVerse is the front end of the Web Wide Worlds framework—a tool for jumping between remixable, persistent 3D places using nothing but the web.</p>
-  <div class="row text-center">
-    <div class="col-md-4" data-aos="fade-up">
-      <div class="tech-card">🪄 <strong>Easy</strong><br>Build your own world in just minutes and share it with anyone!</div>
+<section class="container py-5" id="open">
+  <h2 class="text-center">Open any world by its address</h2>
+  <p class="text-center narrow mb-4">
+    Paste the address of a world's <code>index.veml</code>. The link below opens WebVerse already
+    pointed at it. The world can be served from anywhere that allows cross-origin reads
+    (<code>Access-Control-Allow-Origin: *</code>): your own domain, GitHub Pages, a bucket with a CORS rule.
+  </p>
+  <form class="opener mx-auto" id="opener" novalidate>
+    <label for="addr" class="form-label">The world's document</label>
+    <div class="input-group input-group-lg">
+      <input type="url" class="form-control" id="addr" placeholder="https://your.site/room/index.veml" autocomplete="off" spellcheck="false" />
+      <button class="btn btn-primary" type="submit"><i class="bi bi-door-open"></i> Walk in</button>
     </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-      <div class="tech-card">🔓 <strong>Always Available</strong><br>Go into Web Wide Worlds anytime! It doesn't matter where you are or on what device.</div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-      <div class="tech-card">🕸️ <strong>Decentralized</strong><br>No one owns Web Wide Worlds! You control what you create.</div>
-    </div>
-  </div>
-</section>
-
-<!-- 📦 TRY SECTION -->
-<section class="container py-5 text-center" data-aos="fade-up" id="try">
-  <h2 class="text-info text-center">▶️ Try WebVerse Now!</h2>
-  <p>Get started in Web Wide Worlds right in your browser, or download it onto your device.</p>
-  <div class="row gy-4 mt-4">
-    <div class="col-md-6">
-      <div class="tech-card text-center">
-        <i class="bi bi-download"></i>
-        <h4>Try WebVerse Lite Instantly:</h4>
-        <p>Run WebVerse Lite right in your browser. Works on PC, Mac, Linux, iOS, Android, and more!</p>
-        <a href="webverseapp.html" class="btn btn-info text-dark mt-2">WebVerse Lite</a>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="tech-card text-center">
-        <i class="bi bi-file-earmark-code"></i>
-        <h4>Install WebVerse on Your Device:</h4>
-        <p>Get fully-featured WebVerse for free! Runs in desktop and VR modes. Current platforms: Windows.</p>
-        <a href="https://github.com/Five-Squared-Interactive/WebVerse/releases" class="btn btn-outline-info mt-2">Install WebVerse</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 🛠 TECHNOLOGY STACK -->
-<section class="container py-5" data-aos="fade-up">
-  <h2 class="text-info text-center">🛠 Technology Stack</h2>
-  <div class="row gy-4">
-    <div class="col-md-6 col-lg-3" data-aos="fade-up">
-      <div class="tech-card">
-        <i class="bi bi-bricks"></i>
-        <h4>WebVerse</h4>
-        <p>The World Browser: Your portal to expansive digital worlds.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+    <p class="form-text">The link that opens it:</p>
+    <p class="built"><code><a id="built" href="https://worlds.worldhub.me/webverse/index.html" target="_blank" rel="noopener">https://worlds.worldhub.me/webverse/index.html#world-url=…</a></code><button type="button" class="btn btn-sm btn-outline-light copy" id="copy" hidden>Copy</button></p>
+    <p class="form-text" id="hint" role="status"></p>
+  </form>
+  <div class="row gy-4 mt-3 align-items-start">
+    <div class="col-lg-6">
       <div class="tech-card">
         <i class="bi bi-code-slash"></i>
-        <h4>WorldHub</h4>
-        <p>All-In-One place to explore, create, and share worlds.</p>
+        <h3>If you host worlds, link to it</h3>
+        <p>Give visitors one link. It is the client's address with the world's address after <code>#world-url=</code>, URL-encoded:</p>
+<pre class="doc"><code>&lt;a href="https://worlds.worldhub.me/webverse/index.html
+   #world-url=https%3A%2F%2Fyour.site%2Froom%2Findex.veml"&gt;
+  Walk in
+&lt;/a&gt;</code></pre>
+        <p class="mb-0">A world published from Blender already comes with such a link.</p>
       </div>
     </div>
-    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+    <div class="col-lg-6">
       <div class="tech-card">
-        <i class="bi bi-diagram-3"></i>
-        <h4>VEML</h4>
-        <p>Simple language for describing worlds: like HTML, but in 3D.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-      <div class="tech-card">
-        <i class="bi bi-globe"></i>
-        <h4>WorldOS</h4>
-        <p>Modular server framework for shared, flexible, and scalable worlds.</p>
+        <i class="bi bi-file-earmark-text"></i>
+        <h3>Read the world you are in</h3>
+        <p>Add <code>/index.veml</code> to any published world's address and the whole document opens as text. It is short, and every line means something you can see.</p>
+        <p class="mb-0">Why a world is a web page, in full: <a class="linkable" href="https://fivesqd.com/">fivesqd.com</a>.</p>
       </div>
     </div>
   </div>
 </section>
 
+<section class="container py-5">
+  <h2 class="text-center mb-4">What it does</h2>
+  <div class="row gy-4">
+    <div class="col-md-6 col-lg-3">
+      <div class="tech-card"><i class="bi bi-link-45deg"></i><h3>Opens any world by its address</h3>and follows doors from one world into another.</div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="tech-card"><i class="bi bi-people"></i><h3>Puts visitors in the same room</h3>Others appear, and move, as they move.</div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="tech-card"><i class="bi bi-shield-lock"></i><h3>Runs a world's scripts in a sandbox</h3>so a world can do things and cannot reach outside.</div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="tech-card"><i class="bi bi-lightning-charge"></i><h3>Shows something walkable first</h3>and fills in the detail while you are already there.</div>
+    </div>
+  </div>
+</section>
 
-<!-- 🏙 FEATURED WORLD -->
-<section class="container py-5" data-aos="zoom-in">
-  <h2 class="text-info text-center">🏙 Featured World: Aurelia</h2>
-  <p class="text-center"><strong>Aurelia</strong> is the first planet-scale world in Web Wide Worlds—an entire planet in which you can explore, build, and meet others.</p>
-  <p class="text-center">
-    <a href="https://aurelia.worldhub.me:3000/enter-lite.html" class="linkable">🔗 Visit Aurelia</a>
+<section class="container py-5" id="controls">
+  <h2 class="text-center">Getting around</h2>
+  <p class="text-center narrow mb-4">Press <kbd>H</kbd> in any world to see these again.</p>
+  <div class="row gy-4 justify-content-center">
+    <div class="col-md-4">
+      <div class="tech-card">
+        <i class="bi bi-mouse2"></i>
+        <h3>Look</h3>
+        <p class="mb-0">Click in the world to look around with the mouse. <kbd>Esc</kbd> gives the mouse back.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="tech-card">
+        <i class="bi bi-keyboard"></i>
+        <h3>Move</h3>
+        <p class="mb-0"><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> to move, <kbd>Space</kbd> to jump. <kbd>F</kbd> to fly where the world allows it: <kbd>Space</kbd> up, <kbd>Shift</kbd> down.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="tech-card">
+        <i class="bi bi-phone"></i>
+        <h3>On a phone or tablet</h3>
+        <p class="mb-0">The left stick moves, the right stick looks. Jump, Chat and Fly sit above them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5 text-center">
+  <h2>What it is not</h2>
+  <p class="narrow">
+    Not an app store, not an account, not a place worlds live. The world is files at its own
+    address; WebVerse is how a browser shows them. A world at your own address does not depend
+    on this site. Today the client page it opens in is served from worlds.worldhub.me; the
+    public release lets anyone host that too.
   </p>
 </section>
 
-<!-- 💬 COMMUNITY INVITE -->
-<section class="container py-5 text-center" data-aos="fade-up">
-  <h2 class="text-info">💬 Join the Community</h2>
-  <ul class="list-unstyled">
-    <li><img src="images/discordIcon.png" width="20px" /> <a href="https://discord.gg/nFHsWQt6" class="linkable">Web Wide Worlds Discord</a></li>
-    <!--<li><img src="images/mediumIcon.png" width="20px" /> <a href="https://medium.com/@dbaker5525" class="linkable">Follow on Medium</a></li>-->
-    <li><img src="images/githubIcon.png" width="20px" /> <a href="https://github.com/Five-Squared-Interactive" class="linkable">GitHub Repositories</a></li>
-    <!--<li><img src="images/youtubeIcon.png" width="20px" /> <a href="https://www.youtube.com/@fivesquaredinteractive" class="linkable">Subscribe for Updates</a></li>-->
-  </ul>
+<section class="container py-5 text-center">
+  <h2>Open source</h2>
+  <div class="logo-strip d-flex justify-content-center gap-3 flex-wrap my-3">
+    <img src="images/webverse-icon.png" alt="WebVerse" />
+    <img src="images/StraightFourLogo.webp" alt="StraightFour, the engine under WebVerse" />
+  </div>
+  <p class="narrow">
+    WebVerse and the engine under it, StraightFour, are MIT-licensed. The public release of the
+    current generation is being prepared; the earlier generation is at
+    <a href="https://github.com/Five-Squared-Interactive" class="linkable"><i class="bi bi-github"></i> github.com/Five-Squared-Interactive</a>.
+  </p>
+  <p class="narrow muted">
+    Looking for the earlier WebVerse (2.1.x, the Windows build and the "Lite" viewer)? It is
+    retired, and the worlds it listed are no longer served here. The rest of the story is at
+    <a href="https://fivesqd.com" class="linkable">fivesqd.com</a>.
+  </p>
 </section>
+</main>
 
-<!-- Footer -->
 <footer>
-  <p>Built by independent creators. Powered by open tools.</p>
-  <p>© 2025 <a href="https://fivesqd.com">Five Squared Interactive</a>. All rights reserved. | <a href="https://github.com/Five-Squared-Interactive">GitHub</a> | <a href="https://github.com/Five-Squared-Interactive/WebWideWorlds/blob/main/docs/README.md">Docs</a> | <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsofservice.html">Terms of Use</a></p>
+  <p>© 2026 <a href="https://fivesqd.com">Five Squared Interactive</a>. All rights reserved. | <a href="https://github.com/Five-Squared-Interactive">GitHub (earlier generation)</a> | <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsofservice.html">Terms of Use</a> | <a href="contact.html">Contact</a></p>
 </footer>
 
-<!-- Bootstrap + AOS Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init();
-  function visitWorld() {
-    window.location.href = 'worldwide://aurelia.city'; // Replace with real world URL
-  }
-  function buildWorld() {
-    alert("Launching MetaWorld editor..."); // Replace with real link
-  }
-  function learnMore() {
-    window.location.href = '/about-webverse.html'; // Replace with About page
-  }
-
-  function scrollToElement(elementId) {
-    const targetElement = document.getElementById(elementId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' }); // Use scrollIntoView() for smooth scrolling
+  // The one thing this page does that no other does: turn a world's address
+  // into the link that opens it in the client. No network, no account.
+  (function () {
+    var CLIENT = 'https://worlds.worldhub.me/webverse/index.html';
+    var addr = document.getElementById('addr');
+    var built = document.getElementById('built');
+    var hint = document.getElementById('hint');
+    var form = document.getElementById('opener');
+    function link(value) {
+      return CLIENT + '#world-url=' + encodeURIComponent(value.trim());
     }
-  }
+    var copy = document.getElementById('copy');
+    function why(value) {
+      var u;
+      try { u = new URL(value.trim()); } catch (e) { return 'That is not a web address yet; it needs to start with https://'; }
+      if (u.protocol === 'http:') return 'The client is served over https, so a world at an http:// address would be blocked. Serve it over https.';
+      if (u.protocol !== 'https:') return 'That is not a web address yet; it needs to start with https://';
+      return '';
+    }
+    function soft(value) {
+      try { var u = new URL(value.trim()); return /\.veml$/i.test(u.pathname) ? '' : 'Usually the address ends in index.veml; the client will try this one as given.'; } catch (e) { return ''; }
+    }
+    function valid(value) { return why(value) === ''; }
+    function update() {
+      var v = addr.value.trim();
+      if (!v) { built.textContent = CLIENT + '#world-url=…'; built.href = CLIENT; hint.textContent = ''; hint.classList.remove('soft'); copy.hidden = true; return; }
+      var ok = valid(v);
+      built.textContent = ok ? link(v) : CLIENT + '#world-url=…';
+      built.href = ok ? link(v) : CLIENT;
+      hint.textContent = ok ? soft(v) : why(v);
+      hint.classList.toggle('soft', ok);
+      copy.hidden = !ok;
+    }
+    addr.addEventListener('input', update);
+    copy.addEventListener('click', function () {
+      var text = built.textContent;
+      var failed = function () { hint.textContent = 'Copy failed; select the link and copy it.'; };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { hint.textContent = 'Copied.'; }, failed);
+      else failed();
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = addr.value.trim();
+      if (!valid(v)) { update(); addr.focus(); return; }
+      window.open(link(v), '_blank', 'noopener');
+    });
+  })();
 </script>
-
 </body>
 </html>

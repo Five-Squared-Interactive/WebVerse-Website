@@ -1,0 +1,81 @@
+/* webverse.fivesqd.com: the same type and palette as fivesqd.com's dark
+   theme, so the two sites read as one company. Bootstrap supplies the grid;
+   this file supplies the look. */
+:root {
+  --bg: #0f172a;
+  --bg-alt: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #60a5fa;
+  --button: #2563eb;
+  --button-hover: #1d4ed8;
+  --border: rgba(255, 255, 255, 0.1);
+}
+body { background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+h1, h2, h3 { font-weight: 800; letter-spacing: -0.01em; }
+h2 { font-size: 2rem; margin-bottom: 1rem; }
+h3, .tech-card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
+a { color: var(--accent); }
+code, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+code { color: #c7d2fe; }
+kbd { background: var(--bg-alt); border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 4px; padding: 0 0.4em; font-size: 0.9em; color: var(--text); }
+.skip { position: absolute; left: -999px; top: 0; background: var(--button); color: #fff; padding: 0.5rem 1rem; z-index: 100; }
+.skip:focus { left: 0; }
+
+.topbar { position: sticky; top: 0; z-index: 50; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 0.6rem 0; }
+.topbar .brand { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text); font-weight: 800; text-decoration: none; font-size: 1.1rem; }
+.topbar nav { display: flex; gap: 1.1rem; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+.topbar nav a { color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem; opacity: 0.9; }
+.topbar nav a:hover, .topbar nav a[aria-current] { opacity: 1; color: var(--accent); }
+.topbar nav a.btn-nav { background: var(--button); color: #fff; padding: 0.4rem 0.9rem; border-radius: 999px; opacity: 1; }
+.topbar nav a.btn-nav:hover { background: var(--button-hover); color: #fff; }
+@media (max-width: 720px) {
+  .topbar nav a:not(.btn-nav) { display: none; }
+}
+
+.hero { position: relative; min-height: 72vh; display: flex; align-items: center; text-align: center; background: url('../../images/world-overlook-hero.webp') center / cover no-repeat; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10, 12, 18, 0.35), rgba(10, 12, 18, 0.82)); }
+.hero > .container { position: relative; z-index: 1; }
+.hero h1 { margin: 0; }
+.hero img.logo { width: min(379px, 70vw); height: auto; }
+.hero p.lead { max-width: 40rem; margin: 1rem auto; font-size: 1.35rem; font-weight: 600; }
+.hero .caption { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-top: 1rem; }
+.cta-buttons a { margin: 0.4rem; }
+.btn-primary { background: var(--button); border-color: var(--button); color: #fff; font-weight: 600; }
+.btn-primary:hover, .btn-primary:focus { background: var(--button-hover); border-color: var(--button-hover); }
+.btn-outline-light { font-weight: 600; }
+
+.narrow { max-width: 44rem; margin-left: auto; margin-right: auto; }
+.muted { opacity: 0.8; }
+.tech-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; height: 100%; }
+.tech-card .bi { font-size: 2rem; color: var(--accent); display: block; margin-bottom: 0.6rem; }
+.linkable { color: var(--accent); text-decoration: none; font-weight: 600; }
+.linkable:hover { text-decoration: underline; }
+pre.doc { background: var(--bg); color: #d7dde8; border: 1px solid var(--border); border-radius: 10px; padding: 1rem; font-size: 0.8rem; line-height: 1.5; overflow: auto; margin: 0.5rem 0 1rem; white-space: pre-wrap; word-break: break-all; }
+.logo-strip img { max-height: 72px; background: var(--bg-alt); border-radius: 10px; padding: 0.6rem 1rem; }
+
+.opener { max-width: 760px; }
+.opener .form-label { font-weight: 600; }
+.opener .form-control { background: var(--bg-alt); color: var(--text); border-color: var(--border); }
+.opener .form-control::placeholder { color: var(--muted); }
+.opener .form-control:focus { background: var(--bg-alt); color: var(--text); border-color: var(--accent); box-shadow: 0 0 0 0.2rem rgba(96, 165, 250, 0.25); }
+.opener .form-text { color: var(--muted); }
+.opener .built { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 10px; padding: 0.75rem 1rem; overflow-wrap: anywhere; font-size: 0.9rem; }
+.opener .built code { color: var(--text); }
+#hint { min-height: 1.5em; color: #fbbf24; }
+#hint.soft { color: var(--muted); }
+
+.page-head { text-align: center; }
+.page-head h1 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 0.75rem; }
+
+footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; font-size: 0.9rem; color: var(--muted); }
+footer a { color: var(--accent); }
+
+.opener .built a { color: var(--text); text-decoration: none; overflow-wrap: anywhere; }
+.opener .built a:hover { text-decoration: underline; }
+.opener .copy { margin-left: 0.75rem; }
+.legal { max-width: 46rem; margin: 0 auto; }
+.legal h1 { font-size: clamp(2rem, 4vw, 2.75rem); margin: 0 0 1.5rem; }
+.legal h2 { font-size: 1.35rem; margin: 2rem 0 0.6rem; }
+.legal p, .legal li { color: var(--text); line-height: 1.65; }
+.legal .note { color: var(--muted); font-size: 0.95rem; border-left: 3px solid var(--border); padding-left: 0.9rem; }
