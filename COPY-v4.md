@@ -4,29 +4,66 @@ The current site describes the previous generation: a desktop download
 (Windows, version 2.1.x), "WebVerse Lite" in an iframe, a technology stack
 with WorldOS as "server framework", and a featured planet that no longer
 exists. In the new line WebVerse is the client: a web page that opens a
-world at a URL. The site should say only that, and send people to a world.
+world at a URL. This site says that, and does the one thing no other page
+does: it turns a world's address into the link that opens it. The idea
+itself (why a world is a web page) lives on fivesqd.com; this page links
+there rather than repeating it.
+
+Look: the same type (Inter) and palette as fivesqd.com's dark theme
+(`assets/css/v4.css`), so the two sites read as one company. A header on
+every page: Open a world · Controls · How it works · Contact · Make a world.
 
 ## Page: index.html
 
-**WebVerse**
+**WebVerse** *(the logo, as the page's h1)*
 
 **The client for worlds that are web pages.**
 
 A world is a document at a URL. WebVerse is the page that opens it: on a
-phone, a laptop or a headset browser, with nothing to install. Every
-published world's link opens WebVerse already pointed at that world, so
-most people use it without ever visiting this page.
+phone, a laptop or a headset's browser, with nothing to install. Every
+published world's link opens WebVerse already pointed at that world.
 
-[Walk into a world]({DEMO_WORLD_URL}) · [Make your own](https://fivesqd.com/first-world)
+[Open WebVerse](https://worlds.worldhub.me/webverse/index.html) ·
+[Open a world by its address](#open) ·
+*(when a public demo world exists:)* [Walk into a world]({DEMO_WORLD_URL})
+
+Caption: The Overlook, a world opened in WebVerse.
+
+**Open any world by its address** *(id="open")*
+
+Paste the address of a world's `index.veml`. The link below opens WebVerse
+already pointed at it. The world can be served from anywhere: your own
+domain, GitHub Pages, a bucket. *(A field, a Walk in button, and the built
+link shown live: `https://worlds.worldhub.me/webverse/index.html#world-url=`
+plus the address, URL-encoded. Plain JavaScript on the page; no network.)*
+
+- *If you host worlds, link to it.* Give visitors one link: the client's
+  address with the world's address after `#world-url=`, URL-encoded. *(The
+  anchor tag, spelled out.)* A world published from Blender already comes
+  with such a link.
+- *Read the world you are in.* Add `/index.veml` to any published world's
+  address and the whole document opens as text. Why a world is a web page,
+  in full: fivesqd.com.
 
 **What it does**
 
-- Opens any world by its address, and follows links from one world into
+- Opens any world by its address, and follows doors from one world into
   another.
 - Puts visitors in the same room: others appear, and move, as they move.
-- Runs the world's scripts in a sandbox, so a world can do things and
-  cannot reach outside.
-- Shows something walkable within about two seconds and refines after.
+- Runs a world's scripts in a sandbox, so a world can do things and cannot
+  reach outside.
+- Shows something walkable first, and fills in the detail while you are
+  already there.
+
+**Getting around** *(id="controls"; the client's own hint is the source)*
+
+Press H in any world to see these again.
+- Look: click in the world to look around with the mouse; Esc gives the
+  mouse back.
+- Move: W A S D to move, Space to jump. F to fly where the world allows it:
+  Space up, Shift down.
+- On a phone or tablet: the left stick moves, the right stick looks. Jump,
+  Chat and Fly sit above them.
 
 **What it is not**
 
@@ -36,29 +73,37 @@ your own address opens whether or not this site exists.
 
 **Open source**
 
-WebVerse and the engine under it, StraightFour, are MIT-licensed:
-[github.com/Five-Squared-Interactive](https://github.com/Five-Squared-Interactive).
+WebVerse and the engine under it, StraightFour, are MIT-licensed. The
+public release of the current generation is being prepared; the earlier
+generation is at github.com/Five-Squared-Interactive. Every GitHub link on
+the site says "earlier generation".
+
+**Previous versions**
+
+The earlier WebVerse (2.1.x, Windows and "Lite") is retired and its worlds
+are not served by this site.
 
 **Desktop** *(draft; publish when a build is downloadable)*
 
 The same client as a desktop program, for local networks, kiosks and
 folders on disk. *(platforms, download)*
 
-**Previous versions**
-
-The earlier WebVerse (2.1.x, Windows and "Lite") is retired and its
-worlds are not served by this site. *(Keep the terms, privacy and contact
-pages; drop the Lite viewer page and the featured-worlds list, whose
-worlds no longer load.)*
-
 ## Page: contact.html
 
-Keep. Update the "What is WebVerse?" paragraph to the first three
-sentences above, and remove the Releases list.
+Rebuilt on the same look. One address, info@fivesquaredinteractive.com
+(the one fivesqd.com uses). Three cards: what WebVerse is, where to learn
+more, where the code is (earlier generation, public release in
+preparation).
 
-## Pages to retire
+## Pages retired
 
-`webverseapp.html` (the Lite viewer: its iframe target is gone) and
-`apphelp.html`'s WebGL troubleshooting (the client reports its own
-requirements). Keep `privacypolicy.html` and `termsofservice.html` after a
+`webverseapp.html` (the Lite viewer: its iframe target is gone),
+`apphelp.html` (the client reports its own requirements) and the
+placeholder. `privacypolicy.html` and `termsofservice.html` stay, pending a
 read for references to the desktop app.
+
+## Facts to confirm at deploy
+
+- `{DEMO_WORLD_URL}`: the button stays commented out until a public world
+  exists that stays up and is worth looking at.
+- The social image is `images/og-webverse.png` (PNG, 1200×630).

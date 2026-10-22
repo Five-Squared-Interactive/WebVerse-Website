@@ -5,78 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="icon" href="images/webverse-icon.png">
   <title>WebVerse — the client for worlds that are web pages</title>
-  <meta name="description" content="A world is a document at a URL. WebVerse is the web page that opens it, on a phone, a laptop or a headset's browser, with nothing to install. Open source, MIT." />
+  <meta name="description" content="A world is a document at a URL. WebVerse is the web page that opens it, on a phone, a laptop or a headset's browser, with nothing to install. Open any world by its address." />
+  <link rel="canonical" href="https://webverse.fivesqd.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://webverse.fivesqd.com/" />
   <meta property="og:title" content="WebVerse — the client for worlds that are web pages" />
   <meta property="og:description" content="A world is a document at a URL. WebVerse is the web page that opens it, with nothing to install." />
-  <meta property="og:image" content="https://webverse.fivesqd.com/images/world-overlook-hero.webp" />
+  <meta property="og:image" content="https://webverse.fivesqd.com/images/og-webverse.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WebVerse — the client for worlds that are web pages" />
+  <meta name="twitter:description" content="A world is a document at a URL. WebVerse is the web page that opens it, with nothing to install." />
+  <meta name="twitter:image" content="https://webverse.fivesqd.com/images/og-webverse.png" />
 
-  <!-- Bootstrap CSS and icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-
-  <style>
-    body { background: #0e1117; color: #eee; font-family: 'Segoe UI', system-ui, sans-serif; scroll-behavior: smooth; }
-    .hero {
-      position: relative; min-height: 72vh; display: flex; align-items: center; text-align: center;
-      background: url('images/world-overlook-hero.webp') center / cover no-repeat;
-    }
-    .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,12,18,.35), rgba(10,12,18,.8)); }
-    .hero > .container { position: relative; z-index: 1; }
-    .hero img.logo { width: min(379px, 70vw); height: auto; }
-    .hero p.lead { max-width: 40rem; margin: 1rem auto; font-size: 1.35rem; }
-    .hero .caption { color: rgba(255,255,255,.65); font-size: .9rem; margin-top: 1rem; }
-    .cta-buttons a { margin: .4rem; }
-    .tech-card { background: #1c1f26; border-radius: 12px; padding: 1.5rem; height: 100%; }
-    .tech-card .bi { font-size: 2rem; color: #00c8ff; display: block; margin-bottom: .6rem; }
-    .tech-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: .4rem; }
-    .linkable { color: #00c8ff; text-decoration: none; font-weight: bold; }
-    .narrow { max-width: 44rem; margin-left: auto; margin-right: auto; }
-    .world-frame { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,.45); }
-    pre.doc { background: #1c1f26; color: #d7dde8; border-radius: 12px; padding: 1rem; font-size: .78rem; line-height: 1.45; max-height: 426px; overflow: auto; margin: 0; }
-    figcaption { color: rgba(255,255,255,.65); font-size: .9rem; margin-top: .6rem; }
-    .logo-strip img { max-height: 72px; background: #141821; border-radius: 10px; padding: .6rem 1rem; }
-    .analogy { max-width: 820px; border: 1px solid #2a2f3a; border-radius: 14px; overflow: hidden; background: #1c1f26; text-align: left; }
-    .analogy-head, .analogy-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: .4rem 1rem; align-items: center; padding: .8rem 1.1rem; }
-    .analogy-head { background: #141821; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: .78rem; color: #9bd3ff; }
-    .analogy-row { border-top: 1px solid #2a2f3a; }
-    .analogy-row .analogy-what { grid-column: 1 / -1; font-size: .9rem; opacity: .7; }
-    .analogy-arrow { color: #00c8ff; }
-    .analogy-world { font-weight: 600; }
-    @media (min-width: 720px) {
-      .analogy-head, .analogy-row { grid-template-columns: 1.1fr auto 1.1fr 1.4fr; }
-      .analogy-row .analogy-what { grid-column: auto; }
-    }
-    footer { border-top: 1px solid #333; padding: 2rem; text-align: center; font-size: .9rem; }
-    footer a { color: #9bd3ff; }
-  </style>
+  <link href="assets/css/v4.css" rel="stylesheet">
 </head>
 <body>
-<main>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a class="brand" href="index.html"><img src="images/webverse-icon.png" alt="" width="28" height="28"> WebVerse</a>
+    <nav aria-label="Site">
+      <a href="#open">Open a world</a>
+      <a href="#controls">Controls</a>
+      <a href="https://fivesqd.com/technology">How it works</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn-nav" href="https://fivesqd.com/first-world">Make a world</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
 
 <!-- The words: COPY-v4.md. The demo link is filled in when a public world
      exists; until then the button is left out rather than pointed at a 404. -->
 <section class="hero">
   <div class="container py-5">
-    <a href="index.html"><img class="logo" src="images/WVLogo.png" alt="WebVerse" /></a>
+    <h1><img class="logo" src="images/WVLogo.png" alt="WebVerse" /></h1>
     <p class="lead">The client for worlds that are web pages.</p>
     <p class="narrow">
       A world is a document at a URL. WebVerse is the page that opens it: on a phone, a laptop or a
       headset's browser, with nothing to install. Every published world's link opens WebVerse already
-      pointed at that world, so most people use it without ever visiting this page.
+      pointed at that world.
     </p>
     <div class="cta-buttons">
-      <!-- <a href="{DEMO_WORLD_URL}" class="btn btn-info text-dark btn-lg"><i class="bi bi-door-open"></i> Walk into a world</a> -->
-      <a href="https://fivesqd.com/first-world" class="btn btn-outline-info btn-lg"><i class="bi bi-box-arrow-up-right"></i> Make your own</a>
+      <!-- <a href="{DEMO_WORLD_URL}" class="btn btn-primary btn-lg"><i class="bi bi-door-open"></i> Walk into a world</a> -->
+      <a href="https://worlds.worldhub.me/webverse/index.html" class="btn btn-primary btn-lg"><i class="bi bi-box-arrow-up-right"></i> Open WebVerse</a>
+      <a href="#open" class="btn btn-outline-light btn-lg"><i class="bi bi-link-45deg"></i> Open a world by its address</a>
     </div>
     <p class="caption">The Overlook, a world opened in WebVerse.</p>
   </div>
 </section>
 
+<section class="container py-5" id="open">
+  <h2 class="text-center">Open any world by its address</h2>
+  <p class="text-center narrow mb-4">
+    Paste the address of a world's <code>index.veml</code>. The link below opens WebVerse already
+    pointed at it. The world can be served from anywhere: your own domain, GitHub Pages, a bucket.
+  </p>
+  <form class="opener mx-auto" id="opener" novalidate>
+    <label for="addr" class="form-label">The world's document</label>
+    <div class="input-group input-group-lg">
+      <input type="url" class="form-control" id="addr" placeholder="https://your.site/room/index.veml" autocomplete="off" spellcheck="false" />
+      <button class="btn btn-primary" type="submit"><i class="bi bi-door-open"></i> Walk in</button>
+    </div>
+    <p class="form-text">The link that opens it:</p>
+    <p class="built"><code id="built">https://worlds.worldhub.me/webverse/index.html#world-url=…</code></p>
+    <p class="form-text" id="hint" role="status"></p>
+  </form>
+  <div class="row gy-4 mt-3 align-items-start">
+    <div class="col-lg-6">
+      <div class="tech-card">
+        <i class="bi bi-code-slash"></i>
+        <h3>If you host worlds, link to it</h3>
+        <p>Give visitors one link. It is the client's address with the world's address after <code>#world-url=</code>, URL-encoded:</p>
+<pre class="doc"><code>&lt;a href="https://worlds.worldhub.me/webverse/index.html
+   #world-url=https%3A%2F%2Fyour.site%2Froom%2Findex.veml"&gt;
+  Walk in
+&lt;/a&gt;</code></pre>
+        <p class="mb-0">A world published from Blender already comes with such a link.</p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="tech-card">
+        <i class="bi bi-file-earmark-text"></i>
+        <h3>Read the world you are in</h3>
+        <p>Add <code>/index.veml</code> to any published world's address and the whole document opens as text. It is short, and every line means something you can see.</p>
+        <p class="mb-0">Why a world is a web page, in full: <a class="linkable" href="https://fivesqd.com/">fivesqd.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="container py-5">
-  <h2 class="text-info text-center mb-4">What it does</h2>
+  <h2 class="text-center mb-4">What it does</h2>
   <div class="row gy-4">
     <div class="col-md-6 col-lg-3">
-      <div class="tech-card"><i class="bi bi-link-45deg"></i><h3>Opens any world by its address</h3>and follows links from one world into another.</div>
+      <div class="tech-card"><i class="bi bi-link-45deg"></i><h3>Opens any world by its address</h3>and follows doors from one world into another.</div>
     </div>
     <div class="col-md-6 col-lg-3">
       <div class="tech-card"><i class="bi bi-people"></i><h3>Puts visitors in the same room</h3>Others appear, and move, as they move.</div>
@@ -90,66 +120,36 @@
   </div>
 </section>
 
-<section class="container py-5">
-  <h2 class="text-info text-center">The same machinery as the web</h2>
-  <p class="text-center narrow mb-4">Not a metaphor. Each part of a world is the part of a web page it stands in for.</p>
-  <div class="analogy mx-auto">
-    <div class="analogy-head"><span>A web page</span><span></span><span>A world</span><span></span></div>
-    <div class="analogy-row"><span>An HTML file</span><span class="analogy-arrow">&#8646;</span><span class="analogy-world">A VEML file</span><span class="analogy-what">says what is there and where</span></div>
-    <div class="analogy-row"><span>A web browser</span><span class="analogy-arrow">&#8646;</span><span class="analogy-world">WebVerse, a web page itself</span><span class="analogy-what">opens it from its address</span></div>
-    <div class="analogy-row"><span>Any web host</span><span class="analogy-arrow">&#8646;</span><span class="analogy-world">Any web host</span><span class="analogy-what">serves the files; nothing of ours in between</span></div>
-    <div class="analogy-row"><span>A link to another page</span><span class="analogy-arrow">&#8646;</span><span class="analogy-world">A door to another world</span><span class="analogy-what">joins one address to the next</span></div>
-    <div class="analogy-row"><span>View source</span><span class="analogy-arrow">&#8646;</span><span class="analogy-world">Open the document</span><span class="analogy-what">the whole thing, as text</span></div>
-  </div>
-</section>
-
-<section class="container py-5">
-  <h2 class="text-info text-center">The whole world, and the whole document</h2>
-  <p class="text-center narrow mb-4">Everything the world on the left is made of is the text on the right.</p>
-  <div class="row gy-4 align-items-start">
-    <div class="col-lg-6">
-      <figure class="m-0">
-        <img class="world-frame" src="images/world-overlook-card.webp" width="800" height="426" alt="A cabin at sunset with a campfire and trees: The Overlook, a world opened in WebVerse" loading="lazy" />
-        <figcaption>A world, opened in a browser.</figcaption>
-      </figure>
+<section class="container py-5" id="controls">
+  <h2 class="text-center">Getting around</h2>
+  <p class="text-center narrow mb-4">Press <kbd>H</kbd> in any world to see these again.</p>
+  <div class="row gy-4 justify-content-center">
+    <div class="col-md-4">
+      <div class="tech-card">
+        <i class="bi bi-mouse2"></i>
+        <h3>Look</h3>
+        <p class="mb-0">Click in the world to look around with the mouse. <kbd>Esc</kbd> gives the mouse back.</p>
+      </div>
     </div>
-    <div class="col-lg-6">
-      <figure class="m-0">
-<pre class="doc" aria-label="The complete document of a published world"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;veml xmlns="http://www.fivesqd.com/schemas/veml/4.0"
-      xmlns:env="http://www.fivesqd.com/schemas/veml/4.0/profiles/environment"
-      version="4.0"&gt;
-  &lt;metadata&gt;
-    &lt;title&gt;Living Room&lt;/title&gt;
-    &lt;profile&gt;lighting&lt;/profile&gt;
-    &lt;profile&gt;environment&lt;/profile&gt;
-  &lt;/metadata&gt;
-  &lt;environment&gt;
-    &lt;background color="#404040ff"/&gt;
-    &lt;entry-point id="default"&gt;
-      &lt;position x="3" y="0.1" z="5"/&gt;
-      &lt;rotation x="0" y="0.346936" z="0" w="0.937889"/&gt;
-    &lt;/entry-point&gt;
-    &lt;env:environment-map src="assets/sky.a96a6d688f.png"
-      intensity="9.24" diffuse="4.62" specular="0.15"
-      glazing-boost="10.7" glazing-f0="0.6" punctual-lights="exclude"/&gt;
-    &lt;asset tag="model" src="assets/model.9002eb17ad.glb"&gt;
-      &lt;transform&gt;
-        &lt;position x="0" y="0" z="0"/&gt;
-        &lt;rotation x="0" y="0" z="0" w="1"/&gt;
-        &lt;scale x="1" y="1" z="1"/&gt;
-      &lt;/transform&gt;
-    &lt;/asset&gt;
-  &lt;/environment&gt;
-&lt;/veml&gt;</code></pre>
-        <figcaption>A published world's document: a title, a sky, where you start, the model it loads. The model is a standard glTF file. There is nothing else.</figcaption>
-      </figure>
+    <div class="col-md-4">
+      <div class="tech-card">
+        <i class="bi bi-keyboard"></i>
+        <h3>Move</h3>
+        <p class="mb-0"><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> to move, <kbd>Space</kbd> to jump. <kbd>F</kbd> to fly where the world allows it: <kbd>Space</kbd> up, <kbd>Shift</kbd> down.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="tech-card">
+        <i class="bi bi-phone"></i>
+        <h3>On a phone or tablet</h3>
+        <p class="mb-0">The left stick moves, the right stick looks. Jump, Chat and Fly sit above them.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="container py-5 text-center">
-  <h2 class="text-info">What it is not</h2>
+  <h2>What it is not</h2>
   <p class="narrow">
     Not an app store, not an account, not a place worlds live. The world is files at its own
     address; WebVerse is how a browser shows them. A world at your own address opens whether or
@@ -158,7 +158,7 @@
 </section>
 
 <section class="container py-5 text-center">
-  <h2 class="text-info">Open source</h2>
+  <h2>Open source</h2>
   <div class="logo-strip d-flex justify-content-center gap-3 flex-wrap my-3">
     <img src="images/webverse-icon.png" alt="WebVerse" />
     <img src="images/StraightFourLogo.webp" alt="StraightFour, the engine under WebVerse" />
@@ -168,7 +168,7 @@
     current generation is being prepared; the earlier generation is at
     <a href="https://github.com/Five-Squared-Interactive" class="linkable"><i class="bi bi-github"></i> github.com/Five-Squared-Interactive</a>.
   </p>
-  <p class="narrow" style="opacity:.8">
+  <p class="narrow muted">
     Looking for the earlier WebVerse (2.1.x, the Windows build and the "Lite" viewer)? It is
     retired, and the worlds it listed are no longer served here. The rest of the story is at
     <a href="https://fivesqd.com" class="linkable">fivesqd.com</a>.
@@ -177,8 +177,38 @@
 </main>
 
 <footer>
-  <p>© 2026 <a href="https://fivesqd.com">Five Squared Interactive</a>. All rights reserved. | <a href="https://github.com/Five-Squared-Interactive">GitHub</a> | <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsofservice.html">Terms of Use</a> | <a href="contact.html">Contact</a></p>
+  <p>© 2026 <a href="https://fivesqd.com">Five Squared Interactive</a>. All rights reserved. | <a href="https://github.com/Five-Squared-Interactive">GitHub (earlier generation)</a> | <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsofservice.html">Terms of Use</a> | <a href="contact.html">Contact</a></p>
 </footer>
 
+<script>
+  // The one thing this page does that no other does: turn a world's address
+  // into the link that opens it in the client. No network, no account.
+  (function () {
+    var CLIENT = 'https://worlds.worldhub.me/webverse/index.html';
+    var addr = document.getElementById('addr');
+    var built = document.getElementById('built');
+    var hint = document.getElementById('hint');
+    var form = document.getElementById('opener');
+    function link(value) {
+      return CLIENT + '#world-url=' + encodeURIComponent(value.trim());
+    }
+    function valid(value) {
+      try { var u = new URL(value.trim()); return u.protocol === 'https:' || u.protocol === 'http:'; } catch (e) { return false; }
+    }
+    function update() {
+      var v = addr.value.trim();
+      if (!v) { built.textContent = CLIENT + '#world-url=…'; hint.textContent = ''; return; }
+      built.textContent = link(v);
+      hint.textContent = valid(v) ? '' : 'That is not a web address yet; it needs to start with https://';
+    }
+    addr.addEventListener('input', update);
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = addr.value.trim();
+      if (!valid(v)) { update(); addr.focus(); return; }
+      window.open(link(v), '_blank', 'noopener');
+    });
+  })();
+</script>
 </body>
 </html>
