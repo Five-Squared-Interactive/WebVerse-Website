@@ -202,6 +202,9 @@
       if (u.protocol !== 'https:') return 'That is not a web address yet; it needs to start with https://';
       return '';
     }
+    function soft(value) {
+      try { var u = new URL(value.trim()); return /\.veml$/i.test(u.pathname) ? '' : 'Usually the address ends in index.veml; the client will try this one as given.'; } catch (e) { return ''; }
+    }
     function valid(value) { return why(value) === ''; }
     function update() {
       var v = addr.value.trim();
@@ -209,7 +212,7 @@
       var ok = valid(v);
       built.textContent = ok ? link(v) : CLIENT + '#world-url=…';
       built.href = ok ? link(v) : CLIENT;
-      hint.textContent = why(v);
+      hint.textContent = ok ? soft(v) : why(v);
       copy.hidden = !ok;
     }
     addr.addEventListener('input', update);

@@ -37,7 +37,8 @@ domain, GitHub Pages, a bucket, as long as the host allows cross-origin
 reads (`Access-Control-Allow-Origin: *`). *(A field, a Walk in button, and the built
 link shown live: `https://worlds.worldhub.me/webverse/index.html#world-url=`
 plus the address, URL-encoded, as a link with a Copy button. https only: the
-client is served over https, and an http world would be blocked. Plain
+client is served over https, and an http world would be blocked. An address that does
+not end in .veml gets a soft hint and still works. Plain
 JavaScript on the page; no network.)*
 
 - *If you host worlds, link to it.* Give visitors one link: the client's
