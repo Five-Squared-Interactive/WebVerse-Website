@@ -66,7 +66,8 @@
   <h2 class="text-center">Open any world by its address</h2>
   <p class="text-center narrow mb-4">
     Paste the address of a world's <code>index.veml</code>. The link below opens WebVerse already
-    pointed at it. The world can be served from anywhere: your own domain, GitHub Pages, a bucket.
+    pointed at it. The world can be served from anywhere that allows cross-origin reads
+    (<code>Access-Control-Allow-Origin: *</code>): your own domain, GitHub Pages, a bucket with a CORS rule.
   </p>
   <form class="opener mx-auto" id="opener" novalidate>
     <label for="addr" class="form-label">The world's document</label>
@@ -205,15 +206,18 @@
     function update() {
       var v = addr.value.trim();
       if (!v) { built.textContent = CLIENT + '#world-url=…'; built.href = CLIENT; hint.textContent = ''; copy.hidden = true; return; }
-      built.textContent = link(v);
-      built.href = valid(v) ? link(v) : CLIENT;
+      var ok = valid(v);
+      built.textContent = ok ? link(v) : CLIENT + '#world-url=…';
+      built.href = ok ? link(v) : CLIENT;
       hint.textContent = why(v);
-      copy.hidden = !valid(v);
+      copy.hidden = !ok;
     }
     addr.addEventListener('input', update);
     copy.addEventListener('click', function () {
       var text = built.textContent;
-      if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { hint.textContent = 'Copied.'; });
+      var failed = function () { hint.textContent = 'Copy failed; select the link and copy it.'; };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { hint.textContent = 'Copied.'; }, failed);
+      else failed();
     });
     form.addEventListener('submit', function (e) {
       e.preventDefault();

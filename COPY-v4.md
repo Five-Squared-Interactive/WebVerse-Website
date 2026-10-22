@@ -33,7 +33,8 @@ Caption: The Overlook, a world opened in WebVerse.
 
 Paste the address of a world's `index.veml`. The link below opens WebVerse
 already pointed at it. The world can be served from anywhere: your own
-domain, GitHub Pages, a bucket. *(A field, a Walk in button, and the built
+domain, GitHub Pages, a bucket, as long as the host allows cross-origin
+reads (`Access-Control-Allow-Origin: *`). *(A field, a Walk in button, and the built
 link shown live: `https://worlds.worldhub.me/webverse/index.html#world-url=`
 plus the address, URL-encoded, as a link with a Copy button. https only: the
 client is served over https, and an http world would be blocked. Plain
@@ -105,7 +106,10 @@ preparation).
 `apphelp.html` (the client reports its own requirements) and the
 placeholder. `privacypolicy.html` and `termsofservice.html` stay on the shared look,
 their generated legal text unchanged apart from the site's address, with a
-note that WebVerse itself keeps no account.
+note at the top that the text is the earlier site's and is being reviewed
+for the current generation (founder: terms §2 forbids copying "the
+materials" on a site that promotes MIT software; the privacy text names
+log files and cookies; both need your read).
 
 ## Facts to confirm at deploy
 
