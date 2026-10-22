@@ -208,11 +208,12 @@
     function valid(value) { return why(value) === ''; }
     function update() {
       var v = addr.value.trim();
-      if (!v) { built.textContent = CLIENT + '#world-url=…'; built.href = CLIENT; hint.textContent = ''; copy.hidden = true; return; }
+      if (!v) { built.textContent = CLIENT + '#world-url=…'; built.href = CLIENT; hint.textContent = ''; hint.classList.remove('soft'); copy.hidden = true; return; }
       var ok = valid(v);
       built.textContent = ok ? link(v) : CLIENT + '#world-url=…';
       built.href = ok ? link(v) : CLIENT;
       hint.textContent = ok ? soft(v) : why(v);
+      hint.classList.toggle('soft', ok);
       copy.hidden = !ok;
     }
     addr.addEventListener('input', update);
