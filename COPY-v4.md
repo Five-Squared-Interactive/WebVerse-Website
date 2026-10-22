@@ -35,7 +35,9 @@ Paste the address of a world's `index.veml`. The link below opens WebVerse
 already pointed at it. The world can be served from anywhere: your own
 domain, GitHub Pages, a bucket. *(A field, a Walk in button, and the built
 link shown live: `https://worlds.worldhub.me/webverse/index.html#world-url=`
-plus the address, URL-encoded. Plain JavaScript on the page; no network.)*
+plus the address, URL-encoded, as a link with a Copy button. https only: the
+client is served over https, and an http world would be blocked. Plain
+JavaScript on the page; no network.)*
 
 - *If you host worlds, link to it.* Give visitors one link: the client's
   address with the world's address after `#world-url=`, URL-encoded. *(The
@@ -69,14 +71,16 @@ Press H in any world to see these again.
 
 Not an app store, not an account, not a place worlds live. The world is
 files at its own address; WebVerse is how a browser shows them. A world at
-your own address opens whether or not this site exists.
+your own address does not depend on this site. Today the client page it
+opens in is served from worlds.worldhub.me; the public release lets anyone
+host that too.
 
 **Open source**
 
 WebVerse and the engine under it, StraightFour, are MIT-licensed. The
 public release of the current generation is being prepared; the earlier
 generation is at github.com/Five-Squared-Interactive. Every GitHub link on
-the site says "earlier generation".
+the site, the privacy and terms pages included, says "earlier generation".
 
 **Previous versions**
 
@@ -99,8 +103,9 @@ preparation).
 
 `webverseapp.html` (the Lite viewer: its iframe target is gone),
 `apphelp.html` (the client reports its own requirements) and the
-placeholder. `privacypolicy.html` and `termsofservice.html` stay, pending a
-read for references to the desktop app.
+placeholder. `privacypolicy.html` and `termsofservice.html` stay on the shared look,
+their generated legal text unchanged apart from the site's address, with a
+note that WebVerse itself keeps no account.
 
 ## Facts to confirm at deploy
 

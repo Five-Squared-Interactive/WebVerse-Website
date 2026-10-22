@@ -75,7 +75,7 @@
       <button class="btn btn-primary" type="submit"><i class="bi bi-door-open"></i> Walk in</button>
     </div>
     <p class="form-text">The link that opens it:</p>
-    <p class="built"><code id="built">https://worlds.worldhub.me/webverse/index.html#world-url=…</code></p>
+    <p class="built"><code><a id="built" href="https://worlds.worldhub.me/webverse/index.html" target="_blank" rel="noopener">https://worlds.worldhub.me/webverse/index.html#world-url=…</a></code><button type="button" class="btn btn-sm btn-outline-light copy" id="copy" hidden>Copy</button></p>
     <p class="form-text" id="hint" role="status"></p>
   </form>
   <div class="row gy-4 mt-3 align-items-start">
@@ -152,8 +152,9 @@
   <h2>What it is not</h2>
   <p class="narrow">
     Not an app store, not an account, not a place worlds live. The world is files at its own
-    address; WebVerse is how a browser shows them. A world at your own address opens whether or
-    not this site exists.
+    address; WebVerse is how a browser shows them. A world at your own address does not depend
+    on this site. Today the client page it opens in is served from worlds.worldhub.me; the
+    public release lets anyone host that too.
   </p>
 </section>
 
@@ -192,16 +193,28 @@
     function link(value) {
       return CLIENT + '#world-url=' + encodeURIComponent(value.trim());
     }
-    function valid(value) {
-      try { var u = new URL(value.trim()); return u.protocol === 'https:' || u.protocol === 'http:'; } catch (e) { return false; }
+    var copy = document.getElementById('copy');
+    function why(value) {
+      var u;
+      try { u = new URL(value.trim()); } catch (e) { return 'That is not a web address yet; it needs to start with https://'; }
+      if (u.protocol === 'http:') return 'The client is served over https, so a world at an http:// address would be blocked. Serve it over https.';
+      if (u.protocol !== 'https:') return 'That is not a web address yet; it needs to start with https://';
+      return '';
     }
+    function valid(value) { return why(value) === ''; }
     function update() {
       var v = addr.value.trim();
-      if (!v) { built.textContent = CLIENT + '#world-url=…'; hint.textContent = ''; return; }
+      if (!v) { built.textContent = CLIENT + '#world-url=…'; built.href = CLIENT; hint.textContent = ''; copy.hidden = true; return; }
       built.textContent = link(v);
-      hint.textContent = valid(v) ? '' : 'That is not a web address yet; it needs to start with https://';
+      built.href = valid(v) ? link(v) : CLIENT;
+      hint.textContent = why(v);
+      copy.hidden = !valid(v);
     }
     addr.addEventListener('input', update);
+    copy.addEventListener('click', function () {
+      var text = built.textContent;
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { hint.textContent = 'Copied.'; });
+    });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var v = addr.value.trim();

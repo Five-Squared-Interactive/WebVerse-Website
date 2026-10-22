@@ -14,9 +14,10 @@
 body { background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; scroll-behavior: smooth; }
 h1, h2, h3 { font-weight: 800; letter-spacing: -0.01em; }
 h2 { font-size: 2rem; margin-bottom: 1rem; }
-h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
+h3, .tech-card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
 a { color: var(--accent); }
 code, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+code { color: #c7d2fe; }
 kbd { background: var(--bg-alt); border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 4px; padding: 0 0.4em; font-size: 0.9em; color: var(--text); }
 .skip { position: absolute; left: -999px; top: 0; background: var(--button); color: #fff; padding: 0.5rem 1rem; z-index: 100; }
 .skip:focus { left: 0; }
@@ -68,3 +69,12 @@ pre.doc { background: var(--bg); color: #d7dde8; border: 1px solid var(--border)
 
 footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; font-size: 0.9rem; color: var(--muted); }
 footer a { color: var(--accent); }
+
+.opener .built a { color: var(--text); text-decoration: none; overflow-wrap: anywhere; }
+.opener .built a:hover { text-decoration: underline; }
+.opener .copy { margin-left: 0.75rem; }
+.legal { max-width: 46rem; margin: 0 auto; }
+.legal h1 { font-size: clamp(2rem, 4vw, 2.75rem); margin: 0 0 1.5rem; }
+.legal h2 { font-size: 1.35rem; margin: 2rem 0 0.6rem; }
+.legal p, .legal li { color: var(--text); line-height: 1.65; }
+.legal .note { color: var(--muted); font-size: 0.95rem; border-left: 3px solid var(--border); padding-left: 0.9rem; }
