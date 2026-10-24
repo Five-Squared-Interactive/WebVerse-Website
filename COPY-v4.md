@@ -1,5 +1,16 @@
 # webverse.fivesqd.com, v4 copy
 
+> 2026-10-24, after the publicist review (fivesqd-site,
+> content/reviews/publicist-2026-10-24.md): the page is written for the
+> person who was sent a link. Headline "Walk into 3D worlds, right in your
+> browser."; the controls come second; the address box moved down under
+> "Host your own world? Link to it like this."; "by Five Squared
+> Interactive" in the header; "Open WebVerse" is gone (with no world it
+> showed an empty page); the primary button is "See how it looks", a
+> placeholder slot for a 20-second recording until the founder makes it.
+> Slots (class "slot") are never deployed. The section text below is the
+> earlier draft and is superseded by index.html where they differ.
+
 The current site describes the previous generation: a desktop download
 (Windows, version 2.1.x), "WebVerse Lite" in an iframe, a technology stack
 with WorldOS as "server framework", and a featured planet that no longer

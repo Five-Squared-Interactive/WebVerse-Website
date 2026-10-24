@@ -79,3 +79,16 @@ footer a { color: var(--accent); }
 .legal h2 { font-size: 1.35rem; margin: 2rem 0 0.6rem; }
 .legal p, .legal li { color: var(--text); line-height: 1.65; }
 .legal .note { color: var(--muted); font-size: 0.95rem; border-left: 3px solid var(--border); padding-left: 0.9rem; }
+
+/* 2026-10-24: a split hero for the link-clicker, and placeholder slots for
+   the recording and pictures only the founder can make. */
+.hero-split { min-height: 0; text-align: left; }
+.hero-split .narrow { margin-left: 0; }
+.hero-split img.logo { width: min(320px, 70vw); }
+.topbar .brand .by { font-weight: 500; font-size: .85rem; color: var(--muted); margin-left: .4rem; }
+@media (max-width: 720px) { .topbar .brand .by { display: none; } .hero-split { text-align: center; } .hero-split .narrow { margin-left: auto; } }
+.slot { position: relative; width: 100%; border: 2px dashed var(--accent); border-radius: 14px; background-color: var(--bg-alt); background-size: cover; background-position: center; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1.25rem; overflow: hidden; }
+.slot-poster::before { content: ""; position: absolute; inset: 0; background: var(--bg-alt); opacity: .82; }
+.slot > span { position: relative; }
+.slot-kind { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: .5rem; }
+.slot-label { font-size: .95rem; line-height: 1.45; color: var(--text); max-width: 36ch; }
