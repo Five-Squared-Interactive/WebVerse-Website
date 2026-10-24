@@ -11,7 +11,7 @@
 > Slots (class "slot") are never deployed. The section text below is the
 > earlier draft and is superseded by index.html where they differ.
 
-The current site describes the previous generation: a desktop download
+The current site describes the previous WebVerse: a desktop download
 (Windows, version 2.1.x), "WebVerse Lite" in an iframe, a technology stack
 with WorldOS as "server framework", and a featured planet that no longer
 exists. In the new line WebVerse is the client: a web page that opens a
@@ -90,15 +90,9 @@ host that too.
 
 **Open source**
 
-WebVerse and the engine under it, StraightFour, are MIT-licensed. The
-public release of the current generation is being prepared; the earlier
-generation is at github.com/Five-Squared-Interactive. Every GitHub link on
-the site, the privacy and terms pages included, says "earlier generation".
-
-**Previous versions**
-
-The earlier WebVerse (2.1.x, Windows and "Lite") is retired and its worlds
-are not served by this site.
+WebVerse and the engine under it, StraightFour, are open source under MIT,
+at github.com/Five-Squared-Interactive. Founder, 2026-10-24: no talk of
+earlier or current generations anywhere; GitHub links say "GitHub".
 
 **Desktop** *(draft; publish when a build is downloadable)*
 
@@ -109,8 +103,7 @@ folders on disk. *(platforms, download)*
 
 Rebuilt on the same look. One address, info@fivesquaredinteractive.com
 (the one fivesqd.com uses). Three cards: what WebVerse is, where to learn
-more, where the code is (earlier generation, public release in
-preparation).
+more, where the code is.
 
 ## Pages retired
 
@@ -119,7 +112,7 @@ preparation).
 placeholder. `privacypolicy.html` and `termsofservice.html` stay on the shared look,
 their generated legal text unchanged apart from the site's address, with a
 note at the top that the text is the earlier site's and is being reviewed
-for the current generation (founder: terms §2 forbids copying "the
+(founder: terms §2 forbids copying "the
 materials" on a site that promotes MIT software; the privacy text names
 log files and cookies; both need your read).
 
